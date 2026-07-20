@@ -18,11 +18,11 @@ A lightweight, **100% Zero-Dependency** Minecraft 26.2 client mod that adds a re
 
 ---
 
-## ⚙️ How to Toggle Always-Active Mode
-1. In-game, press **`F3 + F6`** to open the vanilla **F3 Debug Options Screen**.
+## ⚙️ How to Enable Always-Active Mode (In-Game)
+1. In-game, press **`F3 + F6`** to open the native **F3 Debug Options Screen**.
 2. Locate **`speedometer`** in the list.
-3. Click the button to switch status to **`Always`** (or edit `.minecraft/debug-profile.json`).
-4. The Speedometer will now stay displayed on your HUD even when the main F3 debug overlay is closed!
+3. Click the button to switch status to **`Always`**.
+4. The Speedometer will now stay displayed on your HUD even when the main F3 debug screen is closed!
 
 ---
 
