@@ -2,4 +2,4 @@
 
 | Version | Status | Date | Target MC | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| `26.2.0+build.1` | PENDING VERIFICATION | 2026-07-20 | 26.2 | Initial build verification |
+| `1.0.0-26.2` | RELEASED | 2026-07-20 | 26.2 | Initial build verification and release |
