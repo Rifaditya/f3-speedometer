@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.instantgratification.f3speedometer.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "DebugScreenEntriesMixin",
+    "DebugScreenEntryListMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

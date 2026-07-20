@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "f3_speedometer",
+  "version": "${version}",
+  "name": "F3 Speedometer",
+  "description": "A lightweight, zero-dependency mod adding a real-time Speedometer directly into the vanilla F3 debug screen with native ALWAYS_ON toggle support.",
+  "authors": [
+    "Dasik (Rifaditya)"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Rifaditya/Minecraft-Project"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/f3_speedometer/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.instantgratification.f3speedometer.client.F3SpeedometerClient"
+    ]
+  },
+  "mixins": [
+    "f3-speedometer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": ">=26.2"
+  }
+}
