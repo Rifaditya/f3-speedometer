@@ -2,10 +2,15 @@
 
 ## Version History
 
-### 1.0.2-26.2 (2026-07-20)
+### 1.0.3-26.2 (2026-07-20)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2
-- **Summary**: Updated entry identifier namespace so F3 Debug Options Screen displays label cleanly as `speedometer`.
+- **Summary**: Filtered out resting gravity acceleration so standing still returns 0.00 m/s, and added vehicle movement support.
+
+### 1.0.2-26.2 (2026-07-20)
+- **Status**: Obsolete
+- **Minecraft Version**: 26.2
+- **Summary**: Updated entry identifier namespace so F3 Debug Options Screen displays label as `speedometer`.
 
 ### 1.0.1-26.2 (2026-07-20)
 - **Status**: Obsolete
