@@ -8,7 +8,10 @@ A lightweight, **100% Zero-Dependency** Minecraft 26.2 client mod that adds a re
 - **Native F3 Debug Entry**: Registered directly as `speedometer` within Minecraft 26.2's `DebugScreenEntries`.
 - **Clean F3 Menu Label**: Displays as **`speedometer`** in the vanilla F3 Debug Options screen (instead of raw mod identifiers).
 - **Always-Active Toggle**: Supports native `ALWAYS_ON` status in `debug-profile.json` so your speed stays displayed on screen even when the main F3 debug overlay is closed.
-- **Detailed Vector Breakdown**: Measures total 3D speed in m/s (blocks/second) along with horizontal (H) and vertical (V) components.
+- **Detailed Vector Breakdown**: Displays total speed alongside horizontal (**H**) and vertical (**V**) velocity components:
+  - **Speed**: Total 3D movement velocity in blocks per second (m/s).
+  - **H (Horizontal)**: Speed across the ground (X/Z axis) e.g., walking, sprinting, riding a horse/minecart.
+  - **V (Vertical)**: Speed moving up or down (Y axis) e.g., jumping, falling, climbing, or flying.
 - **Vehicle & Riding Support**: Accurately tracks movement speed when riding horses, minecarts, boats, or pigs.
 - **Fixed-Width & Flicker-Free**: Uses smooth velocity vector math and constant-width text padding (`%6.2f`) to keep the HUD line box perfectly steady without expanding/shrinking. Filters out resting gravity (`~0.0784`) so standing still cleanly displays `0.00 m/s`.
 - **Zero External Dependencies**: Requires only Fabric Loader and Minecraft 26.2. No Fabric API or config libraries needed.
