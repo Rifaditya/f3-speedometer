@@ -5,5 +5,5 @@ import net.minecraft.resources.Identifier;
 
 public class F3SpeedometerMod {
     public static final String MOD_ID = "f3_speedometer";
-    public static final Identifier SPEEDOMETER_ID = Identifier.fromNamespaceAndPath(MOD_ID, "speedometer");
+    public static final Identifier SPEEDOMETER_ID = Identifier.withDefaultNamespace("speedometer");
 }
