@@ -2,10 +2,15 @@
 
 ## Version History
 
-### 1.0.3-26.2 (2026-07-20)
+### 1.0.4-26.2 (2026-07-20)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2
-- **Summary**: Filtered out resting gravity acceleration so standing still returns 0.00 m/s, and added vehicle movement support.
+- **Summary**: Updated displayed speed unit suffix from `m/s` to `b/s` (blocks per second).
+
+### 1.0.3-26.2 (2026-07-20)
+- **Status**: Obsolete
+- **Minecraft Version**: 26.2
+- **Summary**: Filtered out resting gravity acceleration so standing still returns 0.00 b/s, and added vehicle movement support.
 
 ### 1.0.2-26.2 (2026-07-20)
 - **Status**: Obsolete

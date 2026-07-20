@@ -27,7 +27,7 @@ public class DebugEntrySpeedometer implements DebugScreenEntry {
         }
 
         if (entity == null) {
-            displayer.addLine("Speed:   0.00 m/s (H:   0.00, V:   0.00)");
+            displayer.addLine("Speed:   0.00 b/s (H:   0.00, V:   0.00)");
             return;
         }
 
@@ -37,7 +37,7 @@ public class DebugEntrySpeedometer implements DebugScreenEntry {
         Vec3 velocity = targetEntity.getDeltaMovement();
 
         double vy = velocity.y;
-        // On ground, ignore constant downward gravity acceleration (~ -0.0784 -> ~1.57 m/s) when resting on blocks
+        // On ground, ignore constant downward gravity acceleration (~ -0.0784 -> ~1.57 b/s) when resting on blocks
         if (targetEntity.onGround() && vy < 0.0 && Math.abs(vy) <= 0.08) {
             vy = 0.0;
         }
@@ -56,13 +56,13 @@ public class DebugEntrySpeedometer implements DebugScreenEntry {
         if (smoothVert < 0.01) smoothVert = 0.0;
         if (smoothSpeed < 0.01) smoothSpeed = 0.0;
 
-        // Clamp display range (up to 999.99 m/s)
+        // Clamp display range (up to 999.99 b/s)
         double dispSpeed = Math.min(smoothSpeed, 999.99);
         double dispHoriz = Math.min(smoothHoriz, 999.99);
         double dispVert = Math.min(smoothVert, 999.99);
 
         // Fixed-width formatting (%6.2f) keeps string length 100% constant to prevent text box resizing
-        String line = String.format(Locale.ROOT, "Speed: %6.2f m/s (H: %6.2f, V: %6.2f)", dispSpeed, dispHoriz, dispVert);
+        String line = String.format(Locale.ROOT, "Speed: %6.2f b/s (H: %6.2f, V: %6.2f)", dispSpeed, dispHoriz, dispVert);
         displayer.addLine(line);
     }
 }
