@@ -1,11 +1,11 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.instantgratification.f3speedometer.mixin;
+package net.vanillaoutsider.f3speedometer.mixin;
 
-import net.instantgratification.f3speedometer.F3SpeedometerMod;
-import net.instantgratification.f3speedometer.client.DebugEntrySpeedometer;
 import net.minecraft.client.gui.components.debug.DebugScreenEntries;
 import net.minecraft.client.gui.components.debug.DebugScreenEntry;
 import net.minecraft.resources.Identifier;
+import net.vanillaoutsider.f3speedometer.F3SpeedometerMod;
+import net.vanillaoutsider.f3speedometer.client.DebugEntrySpeedometer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;

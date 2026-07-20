@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.instantgratification.f3speedometer.mixin",
+  "package": "net.vanillaoutsider.f3speedometer.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
     "DebugScreenEntriesMixin",

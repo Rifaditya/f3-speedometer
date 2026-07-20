@@ -1,5 +1,5 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.instantgratification.f3speedometer;
+package net.vanillaoutsider.f3speedometer;
 
 import net.minecraft.resources.Identifier;
 

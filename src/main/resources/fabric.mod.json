@@ -8,14 +8,14 @@
     "Dasik (Rifaditya)"
   ],
   "contact": {
-    "homepage": "https://github.com/Rifaditya/Minecraft-Project"
+    "homepage": "https://github.com/Rifaditya/f3-speedometer"
   },
   "license": "GPL-3.0-or-later",
   "icon": "assets/f3_speedometer/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.instantgratification.f3speedometer.client.F3SpeedometerClient"
+      "net.vanillaoutsider.f3speedometer.client.F3SpeedometerClient"
     ]
   },
   "mixins": [
