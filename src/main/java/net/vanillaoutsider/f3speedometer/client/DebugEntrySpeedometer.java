@@ -14,8 +14,9 @@ import java.util.Locale;
 
 public class DebugEntrySpeedometer implements DebugScreenEntry {
 
-    private Vec3 lastPos = null;
-    private long lastTime = -1;
+    private double smoothSpeed = 0.0;
+    private double smoothHoriz = 0.0;
+    private double smoothVert = 0.0;
 
     @Override
     public void display(DebugScreenDisplayer displayer, @Nullable Level level, @Nullable LevelChunk clientChunk, @Nullable LevelChunk serverChunk) {
@@ -26,44 +27,32 @@ public class DebugEntrySpeedometer implements DebugScreenEntry {
         }
 
         if (entity == null) {
-            displayer.addLine("Speed: 0.00 m/s");
+            displayer.addLine("Speed:   0.00 m/s (H:   0.00, V:   0.00)");
             return;
         }
 
-        Vec3 currentPos = entity.position();
-        long currentTime = System.currentTimeMillis();
+        Vec3 velocity = entity.getDeltaMovement();
+        double targetHoriz = Math.sqrt(velocity.x * velocity.x + velocity.z * velocity.z) * 20.0;
+        double targetVert = Math.abs(velocity.y) * 20.0;
+        double targetSpeed = velocity.length() * 20.0;
 
-        double speedBps = 0.0;
-        double horizBps = 0.0;
-        double vertBps = 0.0;
+        // Exponential smoothing to prevent frame jitter
+        smoothHoriz = smoothHoriz * 0.7 + targetHoriz * 0.3;
+        smoothVert = smoothVert * 0.7 + targetVert * 0.3;
+        smoothSpeed = smoothSpeed * 0.7 + targetSpeed * 0.3;
 
-        if (lastPos != null && lastTime > 0 && currentTime > lastTime) {
-            double deltaSec = (currentTime - lastTime) / 1000.0;
-            if (deltaSec > 0.001 && deltaSec < 1.0) {
-                double dx = currentPos.x - lastPos.x;
-                double dy = currentPos.y - lastPos.y;
-                double dz = currentPos.z - lastPos.z;
+        // Zero out negligible noise
+        if (smoothHoriz < 0.001) smoothHoriz = 0.0;
+        if (smoothVert < 0.001) smoothVert = 0.0;
+        if (smoothSpeed < 0.001) smoothSpeed = 0.0;
 
-                horizBps = Math.sqrt(dx * dx + dz * dz) / deltaSec;
-                vertBps = Math.abs(dy) / deltaSec;
-                speedBps = Math.sqrt(dx * dx + dy * dy + dz * dz) / deltaSec;
-            } else {
-                Vec3 velocity = entity.getDeltaMovement();
-                horizBps = Math.sqrt(velocity.x * velocity.x + velocity.z * velocity.z) * 20.0;
-                vertBps = Math.abs(velocity.y) * 20.0;
-                speedBps = velocity.length() * 20.0;
-            }
-        } else {
-            Vec3 velocity = entity.getDeltaMovement();
-            horizBps = Math.sqrt(velocity.x * velocity.x + velocity.z * velocity.z) * 20.0;
-            vertBps = Math.abs(velocity.y) * 20.0;
-            speedBps = velocity.length() * 20.0;
-        }
+        // Clamp to prevent exceeding 6-character column width (up to 999.99 m/s)
+        double dispSpeed = Math.min(smoothSpeed, 999.99);
+        double dispHoriz = Math.min(smoothHoriz, 999.99);
+        double dispVert = Math.min(smoothVert, 999.99);
 
-        lastPos = currentPos;
-        lastTime = currentTime;
-
-        String line = String.format(Locale.ROOT, "Speed: %.2f m/s (H: %.2f, V: %.2f)", speedBps, horizBps, vertBps);
+        // Fixed-width formatting (%6.2f) ensures string length is 100% constant to prevent box resizing/flashing
+        String line = String.format(Locale.ROOT, "Speed: %6.2f m/s (H: %6.2f, V: %6.2f)", dispSpeed, dispHoriz, dispVert);
         displayer.addLine(line);
     }
 }
