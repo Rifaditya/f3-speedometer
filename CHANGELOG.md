@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.2-26.2] - 2026-07-21
+
+### Changed
+- Updated the mod's tagline and short description to "Player Speed but blocks per second" across all configuration files, mod registries, and platform guides.
+
 ## [1.2.1-26.2] - 2026-07-21
 
 ### Added

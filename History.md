@@ -2,8 +2,13 @@
 
 ## Version History
 
-### 1.2.1-26.2 (2026-07-21)
+### 1.2.2-26.2 (2026-07-21)
 - **Status**: Stable Release
+- **Minecraft Version**: 26.2
+- **Summary**: Updated mod tagline to "Player Speed but blocks per second" in resources and metadata.
+
+### 1.2.1-26.2 (2026-07-21)
+- **Status**: Obsolete
 - **Minecraft Version**: 26.2
 - **Summary**: Renamed mod back to Speedometer, implemented smart formatting consolidation, and added dynamic layout scaling (removed fixed-width space padding).
 

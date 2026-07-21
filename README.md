@@ -1,6 +1,6 @@
 # Speedometer
 
-A lightweight, **100% Zero-Dependency** Minecraft client mod that adds a real-time Speedometer directly into the vanilla F3 Debug overlay with full support for native `ALWAYS_ON` HUD toggling.
+A lightweight, **100% Zero-Dependency** Minecraft client mod. **Player Speed but blocks per second.**
 
 ---
 
@@ -32,7 +32,7 @@ A lightweight, **100% Zero-Dependency** Minecraft client mod that adds a real-ti
 
 ## 📜 Installation
 1. Install Fabric Loader.
-2. Drop `speedometer-1.2.1-26.2.jar` into your `.minecraft/mods` folder.
+2. Drop `speedometer-1.2.2-26.2.jar` into your `.minecraft/mods` folder.
 3. Launch Minecraft, press `F3` (or `F3 + F6`), and view your real-time movement speed!
 
 ---
