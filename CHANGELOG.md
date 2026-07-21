@@ -1,9 +1,13 @@
 # Changelog - F3 Speedometer
 
-## [1.0.4-26.2] - 2026-07-20
+## [1.1.0-26.2] - 2026-07-21
 
 ### Changed
-- Changed displayed speed unit suffix from `m/s` (meters per second) to `b/s` (blocks per second).
+- Re-structured the mod's architecture to align with Mojang's official **Minecraft 26.3** player speed entry.
+- Renamed HUD display entry class to `DebugEntryPlayerSpeed`.
+- Registered display entry under the official identifier `player_speed` (appears in `F3 + F6` as `player_speed`).
+- Replaced custom velocity tracking methods with vanilla `Entity.getKnownSpeed()`, eliminating sub-frame render calculations and improving performance.
+- Retained horizontal (**H**) and vertical (**V**) speed breakdown calculations in blocks per second (`b/s`).
 
 ## [1.0.3-26.2] - 2026-07-20
 

@@ -2,10 +2,10 @@
 
 ## Version History
 
-### 1.0.4-26.2 (2026-07-20)
+### 1.1.0-26.2 (2026-07-21)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2
-- **Summary**: Updated displayed speed unit suffix from `m/s` to `b/s` (blocks per second).
+- **Summary**: Aligned mod architecture with Mojang's official Minecraft 26.3 player speed structure, using vanilla `Entity.getKnownSpeed()`.
 
 ### 1.0.3-26.2 (2026-07-20)
 - **Status**: Obsolete

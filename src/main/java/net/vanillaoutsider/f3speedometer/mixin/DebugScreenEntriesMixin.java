@@ -5,7 +5,7 @@ import net.minecraft.client.gui.components.debug.DebugScreenEntries;
 import net.minecraft.client.gui.components.debug.DebugScreenEntry;
 import net.minecraft.resources.Identifier;
 import net.vanillaoutsider.f3speedometer.F3SpeedometerMod;
-import net.vanillaoutsider.f3speedometer.client.DebugEntrySpeedometer;
+import net.vanillaoutsider.f3speedometer.client.DebugEntryPlayerSpeed;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,6 +21,6 @@ public abstract class DebugScreenEntriesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void onInit(CallbackInfo ci) {
-        invokeRegister(F3SpeedometerMod.SPEEDOMETER_ID, new DebugEntrySpeedometer());
+        invokeRegister(F3SpeedometerMod.SPEEDOMETER_ID, new DebugEntryPlayerSpeed());
     }
 }
