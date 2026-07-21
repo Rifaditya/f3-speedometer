@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.vanillaoutsider.playerspeed.mixin",
+  "package": "net.vanillaoutsider.speedometer.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
     "DebugScreenEntriesMixin",

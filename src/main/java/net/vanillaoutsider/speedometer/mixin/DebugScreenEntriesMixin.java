@@ -1,12 +1,12 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.vanillaoutsider.playerspeed.mixin;
+package net.vanillaoutsider.speedometer.mixin;
 
 import net.minecraft.client.gui.components.debug.DebugScreenEntries;
 import net.minecraft.client.gui.components.debug.DebugScreenEntry;
 import net.minecraft.resources.Identifier;
-import net.vanillaoutsider.playerspeed.PlayerSpeedMod;
-import net.vanillaoutsider.playerspeed.client.DebugEntryPlayerSpeed;
-import net.vanillaoutsider.playerspeed.client.DebugEntryPlayerSpeedWrapper;
+import net.vanillaoutsider.speedometer.SpeedometerMod;
+import net.vanillaoutsider.speedometer.client.DebugEntrySpeedometer;
+import net.vanillaoutsider.speedometer.client.DebugEntryPlayerSpeedWrapper;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -29,14 +29,13 @@ public abstract class DebugScreenEntriesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void onInit(CallbackInfo ci) {
-        Identifier id = PlayerSpeedMod.SPEEDOMETER_ID;
-        DebugScreenEntry vanillaEntry = ENTRIES_BY_ID.get(id);
+        // Register our custom speedometer entry
+        invokeRegister(SpeedometerMod.SPEEDOMETER_ID, new DebugEntrySpeedometer());
+
+        // Check if player_speed is natively registered by vanilla (Minecraft 26.3+)
+        DebugScreenEntry vanillaEntry = ENTRIES_BY_ID.get(SpeedometerMod.NATIVE_PLAYER_SPEED_ID);
         if (vanillaEntry != null) {
-            // Under Minecraft 26.3+ (where player_speed is natively registered), wrap the vanilla entry
-            ENTRIES_BY_ID.put(id, new DebugEntryPlayerSpeedWrapper(vanillaEntry));
-        } else {
-            // Under Minecraft 26.2, register our own player speed entry
-            invokeRegister(id, new DebugEntryPlayerSpeed());
+            ENTRIES_BY_ID.put(SpeedometerMod.NATIVE_PLAYER_SPEED_ID, new DebugEntryPlayerSpeedWrapper(vanillaEntry));
         }
     }
 }

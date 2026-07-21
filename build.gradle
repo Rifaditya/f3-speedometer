@@ -34,7 +34,7 @@ processResources {
 
 loom {
     mixin {
-        defaultRefmapName = "player-speed-refmap.json"
+        defaultRefmapName = "speedometer-refmap.json"
     }
 }
 

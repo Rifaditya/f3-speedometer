@@ -1,10 +1,10 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.vanillaoutsider.playerspeed.mixin;
+package net.vanillaoutsider.speedometer.mixin;
 
 import net.minecraft.client.gui.components.debug.DebugScreenEntryList;
 import net.minecraft.client.gui.components.debug.DebugScreenEntryStatus;
 import net.minecraft.resources.Identifier;
-import net.vanillaoutsider.playerspeed.PlayerSpeedMod;
+import net.vanillaoutsider.speedometer.SpeedometerMod;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -21,8 +21,8 @@ public abstract class DebugScreenEntryListMixin {
 
     @Inject(method = "rebuildCurrentList", at = @At("HEAD"))
     private void onRebuildCurrentList(CallbackInfo ci) {
-        if (!allStatuses.containsKey(PlayerSpeedMod.SPEEDOMETER_ID)) {
-            allStatuses.put(PlayerSpeedMod.SPEEDOMETER_ID, DebugScreenEntryStatus.IN_OVERLAY);
+        if (!allStatuses.containsKey(SpeedometerMod.SPEEDOMETER_ID)) {
+            allStatuses.put(SpeedometerMod.SPEEDOMETER_ID, DebugScreenEntryStatus.IN_OVERLAY);
         }
     }
 }

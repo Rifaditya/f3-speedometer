@@ -1,37 +1,37 @@
-# Changelog - Player Speed
+# Changelog - Speedometer
 
-## [1.2.0-26.2] - 2026-07-21
+## [1.2.1-26.2] - 2026-07-21
 
 ### Added
-- Added automatic runtime detection of Minecraft 26.3+ native player speed entries.
-- Implemented `DebugEntryPlayerSpeedWrapper` to dynamically wrap vanilla's native entry in 26.3+, keeping vanilla's own speed output intact while appending the horizontal (**H**) and vertical (**V**) speed values in blocks/tick.
-- Retained full custom 26.2 rendering in blocks/sec (`b/s`) with H and V details.
+- Implemented smart consolidation formatting for F3 overlays. If both vanilla's `player_speed` (blocks/tick) and our mod's `speedometer` are enabled, they dynamically consolidate onto a single line matching vanilla's format:
+  `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
+- If `player_speed` is disabled and `speedometer` is enabled, outputs standalone line:
+  `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
+- Removed rigid space padding (`%6.2f`), allowing the speedometer line length to scale dynamically and smoothly without jitter.
+
+### Changed
+- Renamed the mod back to **Speedometer** (independent F3 registration option `minecraft:speedometer` alongside `minecraft:player_speed`).
 
 ## [1.1.0-26.2] - 2026-07-21
 
 ### Changed
-- Re-structured the mod's architecture to align with Mojang's official **Minecraft 26.3** player speed entry.
-- Renamed HUD display entry class to `DebugEntryPlayerSpeed`.
-- Registered display entry under the official identifier `player_speed` (appears in `F3 + F6` as `player_speed`).
-- Replaced custom velocity tracking methods with vanilla `Entity.getKnownSpeed()`, eliminating sub-frame render calculations and improving performance.
-- Retained horizontal (**H**) and vertical (**V**) speed breakdown calculations in blocks per second (`b/s`).
+- Re-structured mod to align with native player speed mechanics.
+- Replaced custom physics formulas with vanilla `Entity.getKnownSpeed()`.
 
 ## [1.0.3-26.2] - 2026-07-20
 
 ### Fixed
-- Fixed standing still velocity artifact (`1.57 m/s` / `1.nnn m/s`) caused by vanilla downward gravity acceleration when standing on blocks. Standing still now correctly displays `0.00 b/s`.
-- Added vehicle support (`entity.getVehicle()`) so riding horses, boats, or minecarts accurately reflects entity speed.
+- Fixed standing still velocity artifact (`1.57 m/s` / `1.nnn m/s`) when resting on blocks.
 
 ## [1.0.2-26.2] - 2026-07-20
 
 ### Fixed
-- Fixed F3 Debug Options Screen label displaying raw identifier (`f3_speedometer:speedometer`).
-- Changed entry identifier to default namespace (`minecraft:speedometer`), allowing F3 options menu to display cleanly as `speedometer`.
+- Fixed F3 Debug Options Screen label displaying raw identifier.
 
 ## [1.0.1-26.2] - 2026-07-20
 
 ### Fixed
-- Fixed sub-frame render flickering and applied fixed-width `%6.2f` column formatting.
+- Fixed sub-frame render flickering and text box resizing.
 
 ## [1.0.0-26.2] - 2026-07-20
 

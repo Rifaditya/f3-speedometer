@@ -1,5 +1,5 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.vanillaoutsider.playerspeed.client;
+package net.vanillaoutsider.speedometer.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.debug.DebugScreenDisplayer;
@@ -8,22 +8,29 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.chunk.LevelChunk;
 import net.minecraft.world.phys.Vec3;
+import net.vanillaoutsider.speedometer.SpeedometerMod;
 import org.jspecify.annotations.Nullable;
 
 import java.util.Locale;
 
-public class DebugEntryPlayerSpeed implements DebugScreenEntry {
+public class DebugEntrySpeedometer implements DebugScreenEntry {
 
     @Override
     public void display(DebugScreenDisplayer displayer, @Nullable Level level, @Nullable LevelChunk clientChunk, @Nullable LevelChunk serverChunk) {
         Minecraft client = Minecraft.getInstance();
+        
+        // If vanilla's native player_speed is also currently enabled, let the wrapper handle the combined output and exit here
+        if (client.debugEntries != null && client.debugEntries.isCurrentlyEnabled(SpeedometerMod.NATIVE_PLAYER_SPEED_ID)) {
+            return;
+        }
+
         Entity entity = client.getCameraEntity();
         if (entity == null) {
             entity = client.player;
         }
 
         if (entity == null) {
-            displayer.addLine("Speed:   0.00 b/s (H:   0.00, V:   0.00)");
+            displayer.addLine("Speed: 0.00 b/s (H: 0.00, V: 0.00)");
             return;
         }
 
@@ -35,13 +42,8 @@ public class DebugEntryPlayerSpeed implements DebugScreenEntry {
         double targetVert = Math.abs(knownSpeed.y) * 20.0;
         double targetSpeed = knownSpeed.length() * 20.0;
 
-        // Clamp display range (up to 999.99 b/s)
-        double dispSpeed = Math.min(targetSpeed, 999.99);
-        double dispHoriz = Math.min(targetHoriz, 999.99);
-        double dispVert = Math.min(targetVert, 999.99);
-
-        // Fixed-width formatting (%6.2f) keeps string length 100% constant to prevent text box resizing
-        String line = String.format(Locale.ROOT, "Speed: %6.2f b/s (H: %6.2f, V: %6.2f)", dispSpeed, dispHoriz, dispVert);
+        // Dynamic string length formatting (%.2f) without rigid spaces padding
+        String line = String.format(Locale.ROOT, "Speed: %.2f b/s (H: %.2f, V: %.2f)", targetSpeed, targetHoriz, targetVert);
         displayer.addLine(line);
     }
 }

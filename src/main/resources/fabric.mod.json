@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "player_speed",
+  "id": "speedometer",
   "version": "${version}",
-  "name": "Player Speed",
-  "description": "A lightweight, zero-dependency mod adding a real-time player speed overlay to the vanilla F3 debug screen, backporting the official 26.3 player_speed entry structure.",
+  "name": "Speedometer",
+  "description": "A lightweight, zero-dependency mod adding an optional, real-time speedometer to the vanilla F3 debug overlay, with smart consolidation support for Minecraft 26.3+.",
   "authors": [
     "Dasik (Rifaditya)"
   ],
   "contact": {
-    "homepage": "https://github.com/Rifaditya/player-speed"
+    "homepage": "https://github.com/Rifaditya/speedometer"
   },
   "license": "GPL-3.0-or-later",
-  "icon": "assets/player_speed/icon.png",
+  "icon": "assets/speedometer/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.vanillaoutsider.playerspeed.client.PlayerSpeedClient"
+      "net.vanillaoutsider.speedometer.client.SpeedometerClient"
     ]
   },
   "mixins": [
-    "player-speed.mixins.json"
+    "speedometer.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.0",

@@ -1,11 +1,11 @@
-# History - Player Speed
+# History - Speedometer
 
 ## Version History
 
-### 1.2.0-26.2 (2026-07-21)
+### 1.2.1-26.2 (2026-07-21)
 - **Status**: Stable Release
-- **Minecraft Version**: 26.2 (with forward compatibility for 26.3)
-- **Summary**: Added runtime wrapper support for Minecraft 26.3+ native player speed entries, intercepting vanilla output and appending H & V values in blocks/tick.
+- **Minecraft Version**: 26.2
+- **Summary**: Renamed mod back to Speedometer, implemented smart formatting consolidation, and added dynamic layout scaling (removed fixed-width space padding).
 
 ### 1.1.0-26.2 (2026-07-21)
 - **Status**: Obsolete
