@@ -1,4 +1,11 @@
-# Changelog - F3 Speedometer
+# Changelog - Player Speed
+
+## [1.2.0-26.2] - 2026-07-21
+
+### Added
+- Added automatic runtime detection of Minecraft 26.3+ native player speed entries.
+- Implemented `DebugEntryPlayerSpeedWrapper` to dynamically wrap vanilla's native entry in 26.3+, keeping vanilla's own speed output intact while appending the horizontal (**H**) and vertical (**V**) speed values in blocks/tick.
+- Retained full custom 26.2 rendering in blocks/sec (`b/s`) with H and V details.
 
 ## [1.1.0-26.2] - 2026-07-21
 

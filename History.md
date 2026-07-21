@@ -1,9 +1,14 @@
-# History - F3 Speedometer
+# History - Player Speed
 
 ## Version History
 
-### 1.1.0-26.2 (2026-07-21)
+### 1.2.0-26.2 (2026-07-21)
 - **Status**: Stable Release
+- **Minecraft Version**: 26.2 (with forward compatibility for 26.3)
+- **Summary**: Added runtime wrapper support for Minecraft 26.3+ native player speed entries, intercepting vanilla output and appending H & V values in blocks/tick.
+
+### 1.1.0-26.2 (2026-07-21)
+- **Status**: Obsolete
 - **Minecraft Version**: 26.2
 - **Summary**: Aligned mod architecture with Mojang's official Minecraft 26.3 player speed structure, using vanilla `Entity.getKnownSpeed()`.
 
