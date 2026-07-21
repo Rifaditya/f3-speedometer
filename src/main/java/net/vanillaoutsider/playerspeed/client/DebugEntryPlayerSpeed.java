@@ -1,5 +1,5 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.vanillaoutsider.f3speedometer.client;
+package net.vanillaoutsider.playerspeed.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.components.debug.DebugScreenDisplayer;

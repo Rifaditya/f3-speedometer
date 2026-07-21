@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.vanillaoutsider.f3speedometer.mixin",
+  "package": "net.vanillaoutsider.playerspeed.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
     "DebugScreenEntriesMixin",

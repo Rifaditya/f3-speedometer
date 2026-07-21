@@ -1,9 +1,9 @@
 // Copyright (C) 2026 Dasik (Rifaditya) | GNU GPLv3
-package net.vanillaoutsider.f3speedometer.client;
+package net.vanillaoutsider.playerspeed.client;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class F3SpeedometerClient implements ClientModInitializer {
+public class PlayerSpeedClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         // Initialization handled during static Mixin load into DebugScreenEntries

@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "f3_speedometer",
+  "id": "player_speed",
   "version": "${version}",
-  "name": "F3 Speedometer",
-  "description": "A lightweight, zero-dependency mod adding a real-time Speedometer directly into the vanilla F3 debug screen with native ALWAYS_ON toggle support.",
+  "name": "Player Speed",
+  "description": "A lightweight, zero-dependency mod adding a real-time player speed overlay to the vanilla F3 debug screen, backporting the official 26.3 player_speed entry structure.",
   "authors": [
     "Dasik (Rifaditya)"
   ],
   "contact": {
-    "homepage": "https://github.com/Rifaditya/f3-speedometer"
+    "homepage": "https://github.com/Rifaditya/player-speed"
   },
   "license": "GPL-3.0-or-later",
-  "icon": "assets/f3_speedometer/icon.png",
+  "icon": "assets/player_speed/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
-      "net.vanillaoutsider.f3speedometer.client.F3SpeedometerClient"
+      "net.vanillaoutsider.playerspeed.client.PlayerSpeedClient"
     ]
   },
   "mixins": [
-    "f3-speedometer.mixins.json"
+    "player-speed.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.0",

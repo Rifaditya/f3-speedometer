@@ -6,4 +6,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'f3-speedometer'
+rootProject.name = 'player-speed'
