@@ -1,7 +1,7 @@
 <p align="center">
-  <h1 align="center">⚡ F3 Speedometer</h1>
+  <h1 align="center">⚡ Speedometer</h1>
   <p align="center">
-    <strong>A lightweight, 100% zero-dependency mod adding a real-time Speedometer to Minecraft's F3 debug screen.</strong>
+    <strong>Player Speed but blocks per second.</strong>
   </p>
   <p align="center">
     <a href="https://fabricmc.net/"><img src="https://img.shields.io/badge/Loader-Fabric-dbb15a?style=for-the-badge" alt="Fabric"></a>
@@ -14,32 +14,44 @@
 
 > **⚠️ Backport Disclaimer**: This project targets current stable Minecraft versions. **No backports to older versions will be developed.**
 
+## 🎬 Showcase
+
+[![Speedometer + Max Elytra Speed Showcase](https://img.youtube.com/vi/Y1DDyWD-5es/maxresdefault.jpg)](https://youtu.be/Y1DDyWD-5es)
+
+*Speedometer in action — combined with a max Elytra speed mod. Both `player_speed` and `speedometer` enabled simultaneously, showing consolidated real-time output.*
+
+---
+
 ## 📖 Overview
 
-**F3 Speedometer** seamlessly integrates movement velocity tracking directly into Minecraft's native **F3 Debug Screen** system (`DebugScreenEntries`).
-
-Whether you are testing minecart speeds, optimizing elytra flight angles, riding horses, or sprinting through your base, F3 Speedometer gives you real-time numerical speed feedback without bloat or external dependencies.
+You know the vanilla `player_speed` entry in F3 that shows `Speed: 0.215 blocks/tick`? **Speedometer** is that, but in **blocks per second** — a real-world-readable number that actually means something. It integrates directly into Minecraft's native F3 Debug Screen system, using the exact same tick-based physics data that vanilla uses.
 
 ---
 
 ## ✨ Features
 
-- **⚡ Native F3 Entry**: Registered as `f3_speedometer:speedometer` within Minecraft's modular debug system.
-- **📌 ALWAYS_ON Support**: Fully compatible with Minecraft's `ALWAYS_ON` F3 entry status—keep your speedometer visible on HUD even when the main F3 debug overlay is closed!
-- **📐 3D Vector Breakdown**: Displays total speed (in blocks/second / m/s) alongside horizontal (H) and vertical (V) components:
-  ```text
-  Speed: 14.50 m/s (H: 12.30, V: 7.70)
-  ```
-- **🪶 100% Zero Dependencies**: Built strictly with Fabric Loader and vanilla code. No Fabric API, Cloth Config, or third-party libraries required.
+- **⚡ Native F3 Entry**: Registered as a first-class `speedometer` option inside Minecraft's debug overlay system — not a hacky overlay on top.
+- **🛠️ Three Configurable Layouts** via `F3 + F6` Debug Options:
+  1. **Both Enabled** (Smart consolidated line):
+     `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
+  2. **Only Speedometer Enabled** (blocks/sec only):
+     `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
+  3. **Only Player Speed Enabled** (unchanged vanilla):
+     `Speed: 0.215 blocks/tick`
+- **📌 ALWAYS_ON HUD Support**: Pin your speedometer to screen even when the F3 overlay is hidden — set it to `Always` in the debug options.
+- **📐 Dynamic & Jitter-Free**: Powered by vanilla's own pre-calculated physics tick vector (`getKnownSpeed()`), updating 20 times per second — no flickering, no frame-rate jitter, no extra performance cost.
+- **↔️ H & V Breakdown**: See not just total speed but horizontal ground speed (**H**) and vertical fall/climb speed (**V**) separately.
+- **🚗 Vehicle Support**: Accurate when riding horses, minecarts, boats, or pigs — it tracks the vehicle's movement automatically.
+- **🪶 100% Zero Dependencies**: Just drop it in your mods folder. No Fabric API. No Cloth Config. Nothing else required.
 
 ---
 
-## ⚙️ How to Enable Always-Active Mode
+## ⚙️ How to Use
 
-To keep the Speedometer on screen at all times:
-1. Open your `.minecraft/debug-profile.json` file (or use F3 debug profile toggles).
-2. Set `f3_speedometer:speedometer` status to `"alwaysOn"`.
-3. The speedometer will remain cleanly visible on your HUD without displaying the rest of the F3 debug screen!
+1. Press **`F3 + F6`** in-game to open the **F3 Debug Options Screen**.
+2. Find **`speedometer`** (and **`player_speed`** if on 26.3+).
+3. Toggle their status: `Always`, `In Overlay`, or `OFF`.
+4. The layout updates instantly based on what you enable.
 
 ---
 
@@ -53,7 +65,7 @@ To keep the Speedometer on screen at all times:
 
 ## 📜 License & Modpacks
 
-> **GPLv3 Licensed**. You are free to include **F3 Speedometer** in any modpack on any platform!
+> **GPLv3 Licensed**. You are free to include **Speedometer** in any modpack on any platform!
 
 <p align="center">
   <em>Made with ❤️ for the Minecraft Modding Community.</em>

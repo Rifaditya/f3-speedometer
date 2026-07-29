@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>⚡ F3 Speedometer</h1>
-  <p><strong>A lightweight, 100% zero-dependency mod adding a real-time Speedometer to Minecraft's F3 debug screen.</strong></p>
+  <h1>⚡ Speedometer</h1>
+  <p><strong>Player Speed but blocks per second.</strong></p>
   <p>
     <a href="https://fabricmc.net/"><img src="https://img.shields.io/badge/Loader-Fabric-dbb15a?style=for-the-badge" alt="Fabric"></a>
     <a href="https://adoptium.net/"><img src="https://img.shields.io/badge/Java-25-orange?style=for-the-badge" alt="Java 25"></a>
@@ -14,30 +14,51 @@
   <strong>⚠️ Backport Disclaimer:</strong> This project targets current stable Minecraft versions. <strong>No backports to older versions will be developed.</strong>
 </blockquote>
 
+<h2>🎬 Showcase</h2>
+<p align="center">
+  <a href="https://youtu.be/Y1DDyWD-5es">
+    <img src="https://img.youtube.com/vi/Y1DDyWD-5es/maxresdefault.jpg" alt="Speedometer + Max Elytra Speed Showcase" width="100%">
+  </a>
+</p>
+<p align="center">
+  <em>Speedometer in action — combined with a max Elytra speed mod. Both <code>player_speed</code> and <code>speedometer</code> enabled simultaneously, showing consolidated real-time output.</em>
+</p>
+
 <h2>📖 Overview</h2>
 <p>
-  <strong>F3 Speedometer</strong> seamlessly integrates movement velocity tracking directly into Minecraft's native <strong>F3 Debug Screen</strong> system (<code>DebugScreenEntries</code>).
+  You know the vanilla <code>player_speed</code> entry in F3 that shows <code>Speed: 0.215 blocks/tick</code>? <strong>Speedometer</strong> is that, but in <strong>blocks per second</strong> — a real-world-readable number that actually means something. It integrates directly into Minecraft's native F3 Debug Screen system, using the exact same tick-based physics data that vanilla uses.
 </p>
-<p>
-  Whether you are testing minecart speeds, optimizing elytra flight angles, riding horses, or sprinting through your base, F3 Speedometer gives you real-time numerical speed feedback without bloat or external dependencies.
-</p>
+
 
 <h2>✨ Features</h2>
 <ul>
-  <li><strong>⚡ Native F3 Entry:</strong> Registered as <code>f3_speedometer:speedometer</code> within Minecraft's modular debug system.</li>
-  <li><strong>📌 ALWAYS_ON Support:</strong> Fully compatible with Minecraft's <code>ALWAYS_ON</code> F3 entry status—keep your speedometer visible on HUD even when the main F3 debug overlay is closed!</li>
-  <li><strong>📐 3D Vector Breakdown:</strong> Displays total speed (in blocks/second / m/s) alongside horizontal (H) and vertical (V) components:
-    <pre><code>Speed: 14.50 m/s (H: 12.30, V: 7.70)</code></pre>
+  <li><strong>⚡ Native F3 Entry:</strong> Registered as a first-class <code>speedometer</code> option inside Minecraft's debug overlay system — not a hacky overlay on top.</li>
+  <li><strong>🛠️ Three Configurable Layouts</strong> via <code>F3 + F6</code> Debug Options:
+    <ol>
+      <li><strong>Both Enabled</strong> (Smart consolidated line):
+        <pre><code>Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
+      </li>
+      <li><strong>Only Speedometer Enabled</strong> (blocks/sec only):
+        <pre><code>Speed: 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
+      </li>
+      <li><strong>Only Player Speed Enabled</strong> (unchanged vanilla):
+        <pre><code>Speed: 0.215 blocks/tick</code></pre>
+      </li>
+    </ol>
   </li>
-  <li><strong>🪶 100% Zero Dependencies:</strong> Built strictly with Fabric Loader and vanilla code. No Fabric API, Cloth Config, or third-party libraries required.</li>
+  <li><strong>📌 ALWAYS_ON HUD Support:</strong> Pin your speedometer to screen even when the F3 overlay is hidden — set it to <code>Always</code> in the debug options.</li>
+  <li><strong>📐 Dynamic &amp; Jitter-Free:</strong> Powered by vanilla's own pre-calculated physics tick vector (<code>getKnownSpeed()</code>), updating 20 times per second — no flickering, no frame-rate jitter, no extra performance cost.</li>
+  <li><strong>↔️ H &amp; V Breakdown:</strong> See not just total speed but horizontal ground speed (<strong>H</strong>) and vertical fall/climb speed (<strong>V</strong>) separately.</li>
+  <li><strong>🚗 Vehicle Support:</strong> Accurate when riding horses, minecarts, boats, or pigs — it tracks the vehicle's movement automatically.</li>
+  <li><strong>🪶 100% Zero Dependencies:</strong> Just drop it in your mods folder. No Fabric API. No Cloth Config. Nothing else required.</li>
 </ul>
 
-<h2>⚙️ How to Enable Always-Active Mode</h2>
-<p>To keep the Speedometer on screen at all times:</p>
+<h2>⚙️ How to Use</h2>
 <ol>
-  <li>Open your <code>.minecraft/debug-profile.json</code> file (or use F3 debug profile toggles).</li>
-  <li>Set <code>f3_speedometer:speedometer</code> status to <code>"alwaysOn"</code>.</li>
-  <li>The speedometer will remain cleanly visible on your HUD without displaying the rest of the F3 debug screen!</li>
+  <li>Press <strong><code>F3 + F6</code></strong> in-game to open the <strong>F3 Debug Options Screen</strong>.</li>
+  <li>Find <strong><code>speedometer</code></strong> (and <strong><code>player_speed</code></strong> if on 26.3+).</li>
+  <li>Toggle their status: <code>Always</code>, <code>In Overlay</code>, or <code>OFF</code>.</li>
+  <li>The layout updates instantly based on what you enable.</li>
 </ol>
 
 <h2>👥 Credits</h2>
@@ -50,15 +71,15 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>Author & Developer</strong></td>
+      <td><strong>Author &amp; Developer</strong></td>
       <td><strong>Dasik (Rifaditya)</strong></td>
     </tr>
   </tbody>
 </table>
 
-<h2>📜 License & Modpacks</h2>
+<h2>📜 License &amp; Modpacks</h2>
 <blockquote>
-  <strong>GPLv3 Licensed.</strong> You are free to include <strong>F3 Speedometer</strong> in any modpack on any platform!
+  <strong>GPLv3 Licensed.</strong> You are free to include <strong>Speedometer</strong> in any modpack on any platform!
 </blockquote>
 
 <div align="center">
