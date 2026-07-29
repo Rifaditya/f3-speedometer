@@ -8,3 +8,7 @@ out/
 *.ipr
 *.iws
 .DS_Store
+
+Archive/
+Archive Jar of all versions/
+*.jar
