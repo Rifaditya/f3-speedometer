@@ -38,11 +38,6 @@ Three display modes, controlled entirely through vanilla's **F3 Debug Options Sc
 
 1. **Speedometer only** *(default — works on all versions)*:
    `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer only — no player_speed" width="500">
-</p>
-<p align="center"><em>Speedometer only — clean standalone blocks/sec output with no vanilla <code>player_speed</code> needed.</em></p>
 2. **Both Speedometer + vanilla Player Speed** *(26.3+ only — smart consolidated line)*:
    `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
 3. **Vanilla Player Speed only** *(26.3+ only — unchanged, your choice)*:
@@ -51,10 +46,17 @@ Three display modes, controlled entirely through vanilla's **F3 Debug Options Sc
 > [!TIP]
 > **Smart Consolidation**: When both entries are enabled on 26.3+, they automatically merge onto a **single line** — no duplicate clutter, no wasted HUD space.
 
+**Speedometer only:**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer only — no player_speed" width="500">
+</p>
+
+**Both enabled (consolidated):**
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both player_speed and speedometer enabled — combined output" width="600">
 </p>
-<p align="center"><em>Both <code>player_speed</code> and <code>speedometer</code> enabled simultaneously — one clean consolidated line.</em></p>
 
 ### 📌 ALWAYS_ON HUD Support
 
