@@ -18,7 +18,7 @@
 
 [![Speedometer + Max Elytra Speed Showcase](https://img.youtube.com/vi/Y1DDyWD-5es/maxresdefault.jpg)](https://youtu.be/Y1DDyWD-5es)
 
-*Speedometer in action — combined with a max Elytra speed mod. Both `player_speed` and `speedometer` enabled simultaneously, showing consolidated real-time output.*
+*Speedometer in action — combined with a max Elytra speed mod. Works independently on its own, or consolidates with vanilla's `player_speed` into a single clean line when both are enabled.*
 
 ---
 
