@@ -46,6 +46,11 @@ Three display modes, controlled entirely through vanilla's **F3 Debug Options Sc
 > [!TIP]
 > **Smart Consolidation**: When both entries are enabled on 26.3+, they automatically merge onto a **single line** — no duplicate clutter, no wasted HUD space.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both player_speed and speedometer enabled — combined output" width="600">
+</p>
+<p align="center"><em>Both <code>player_speed</code> and <code>speedometer</code> enabled simultaneously — one clean consolidated line.</em></p>
+
 ### 📌 ALWAYS_ON HUD Support
 
 Don't want to keep F3 open? Set `speedometer` to **`Always`** in the F3 Debug Options Screen and your speedometer stays pinned to the screen permanently — even when the full F3 debug overlay is closed.
