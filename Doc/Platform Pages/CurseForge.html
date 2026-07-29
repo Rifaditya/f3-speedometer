@@ -32,16 +32,16 @@
 
 <h2>✨ Features</h2>
 <ul>
-  <li><strong>⚡ Native F3 Entry:</strong> Registered as a first-class <code>speedometer</code> option inside Minecraft's debug overlay system — not a hacky overlay on top.</li>
-  <li><strong>🛠️ Three Configurable Layouts</strong> via <code>F3 + F6</code> Debug Options:
+  <li><strong>⚡ Fully Independent:</strong> Works on its own out of the box — no dependency on vanilla's <code>player_speed</code>. Just install and go.</li>
+  <li><strong>🛠️ Smart Layouts</strong> via <code>F3 + F6</code> Debug Options — three modes depending on what you enable:
     <ol>
-      <li><strong>Both Enabled</strong> (Smart consolidated line):
-        <pre><code>Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
-      </li>
-      <li><strong>Only Speedometer Enabled</strong> (blocks/sec only):
+      <li><strong>Speedometer only</strong> <em>(default)</em>:
         <pre><code>Speed: 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
       </li>
-      <li><strong>Only Player Speed Enabled</strong> (unchanged vanilla):
+      <li><strong>Both Speedometer + vanilla Player Speed</strong> <em>(consolidated into one clean line on 26.3+)</em>:
+        <pre><code>Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
+      </li>
+      <li><strong>Vanilla Player Speed only</strong> <em>(unchanged, if you prefer blocks/tick)</em>:
         <pre><code>Speed: 0.215 blocks/tick</code></pre>
       </li>
     </ol>
@@ -54,10 +54,11 @@
 </ul>
 
 <h2>⚙️ How to Use</h2>
+<p><strong>Speedometer works immediately after install — no setup needed.</strong> It registers its own independent <code>speedometer</code> entry in F3.</p>
 <ol>
   <li>Press <strong><code>F3 + F6</code></strong> in-game to open the <strong>F3 Debug Options Screen</strong>.</li>
-  <li>Find <strong><code>speedometer</code></strong> (and <strong><code>player_speed</code></strong> if on 26.3+).</li>
-  <li>Toggle their status: <code>Always</code>, <code>In Overlay</code>, or <code>OFF</code>.</li>
+  <li>Find <strong><code>speedometer</code></strong> and toggle its status: <code>Always</code>, <code>In Overlay</code>, or <code>OFF</code>.</li>
+  <li>On Minecraft 26.3+, you'll also see vanilla's <strong><code>player_speed</code></strong> entry. If you enable both, they automatically <strong>consolidate into one combined line</strong> — no duplicate clutter.</li>
   <li>The layout updates instantly based on what you enable.</li>
 </ol>
 

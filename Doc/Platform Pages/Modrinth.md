@@ -30,13 +30,13 @@ You know the vanilla `player_speed` entry in F3 that shows `Speed: 0.215 blocks/
 
 ## ✨ Features
 
-- **⚡ Native F3 Entry**: Registered as a first-class `speedometer` option inside Minecraft's debug overlay system — not a hacky overlay on top.
-- **🛠️ Three Configurable Layouts** via `F3 + F6` Debug Options:
-  1. **Both Enabled** (Smart consolidated line):
-     `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
-  2. **Only Speedometer Enabled** (blocks/sec only):
+- **⚡ Fully Independent**: Works on its own out of the box — no dependency on vanilla's `player_speed`. Just install and go.
+- **🛠️ Smart Layouts** via `F3 + F6` Debug Options — three modes depending on what you enable:
+  1. **Speedometer only** *(default)*:
      `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
-  3. **Only Player Speed Enabled** (unchanged vanilla):
+  2. **Both Speedometer + vanilla Player Speed** *(consolidated into one clean line on 26.3+)*:
+     `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
+  3. **Vanilla Player Speed only** *(unchanged, if you prefer blocks/tick)*:
      `Speed: 0.215 blocks/tick`
 - **📌 ALWAYS_ON HUD Support**: Pin your speedometer to screen even when the F3 overlay is hidden — set it to `Always` in the debug options.
 - **📐 Dynamic & Jitter-Free**: Powered by vanilla's own pre-calculated physics tick vector (`getKnownSpeed()`), updating 20 times per second — no flickering, no frame-rate jitter, no extra performance cost.
@@ -48,9 +48,11 @@ You know the vanilla `player_speed` entry in F3 that shows `Speed: 0.215 blocks/
 
 ## ⚙️ How to Use
 
+**Speedometer works immediately after install — no setup needed.** It registers its own independent `speedometer` entry in F3.
+
 1. Press **`F3 + F6`** in-game to open the **F3 Debug Options Screen**.
-2. Find **`speedometer`** (and **`player_speed`** if on 26.3+).
-3. Toggle their status: `Always`, `In Overlay`, or `OFF`.
+2. Find **`speedometer`** and toggle its status: `Always`, `In Overlay`, or `OFF`.
+3. On Minecraft 26.3+, you'll also see vanilla's **`player_speed`** entry. If you enable both, they automatically **consolidate into one combined line** — no duplicate clutter.
 4. The layout updates instantly based on what you enable.
 
 ---
