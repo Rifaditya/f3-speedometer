@@ -116,7 +116,7 @@ Drop the JAR in your mods folder and done. No Fabric API. No Cloth Config. No Da
 
 | Minecraft Version | Status |
 | :--- | :---: |
-| 26.2 (current) | ✅ Active |
+| 26.2 and above (current) | ✅ Active |
 | 26.1.x and below | ❌ Not supported |
 
 ---
