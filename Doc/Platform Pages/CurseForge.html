@@ -7,15 +7,19 @@
 
 <h1>⚡ Speedometer</h1>
 
+<blockquote><strong>Player Speed but blocks per second.</strong></blockquote>
+
 <p><strong>Active Version Policy:</strong> I build <strong>1 JAR for 1 Version</strong>. I only update and maintain the latest active Minecraft version (e.g. when 26.3 is released, 26.2 is retired). No backports or legacy version maintenance. Please do not ask.</p>
 
-<p><strong>The Vanilla Problem:</strong> The vanilla <code>player_speed</code> F3 entry shows your speed in <strong>blocks/tick</strong> — a physics unit that means nothing to most players. <code>0.215 blocks/tick</code> doesn't tell you how fast you're actually moving. Is that fast? Is that slow? Nobody knows.</p>
+<p>Every Minecraft player knows the frustration: you press F3, look for your speed, and vanilla gives you <code>0.215 blocks/tick</code>. A raw physics calculation unit that means nothing during normal gameplay. Is that fast? Is that slow? How fast are you actually flying with Elytra or riding a horse?</p>
 
-<p><strong>Speedometer</strong> fixes this by adding a dedicated F3 debug entry that shows your speed in <strong>blocks per second</strong> — the same unit your brain actually understands. It works fully independently, uses vanilla's own tick-based physics data, and even consolidates with <code>player_speed</code> into a single clean line on Minecraft 26.3+.</p>
+<p><strong>Speedometer</strong> fixes this foundation. It adds a native F3 debug entry that converts your movement into real-world readable <strong>blocks per second (b/s)</strong>. Powered directly by vanilla's 20 tps physics engine (<code>getKnownSpeed()</code>), it updates dynamically, breaks down horizontal vs vertical velocity, works on vehicles, and seamlessly consolidates with vanilla's <code>player_speed</code> on Minecraft 26.3+.</p>
+
+<p>Part of the <strong>Vanilla Outsider Collection</strong> — mods that refine the vanilla experience with modern standards.</p>
 
 <hr>
 
-<h2>🎬 Showcase</h2>
+<h2>🎬 Showcase Video</h2>
 
 <p align="center">
   <a href="https://youtu.be/Y1DDyWD-5es">
@@ -32,60 +36,55 @@
 
 <h2>✨ Features</h2>
 
-<h3>⚡ Fully Independent</h3>
-<p>Speedometer registers its own dedicated <code>speedometer</code> entry in Minecraft's native <code>DebugScreenEntries</code> system — completely separate from, and not requiring, vanilla's <code>player_speed</code>. Install it and it just works.</p>
+<h3>⚡ Fully Independent F3 Debug Entry</h3>
+<p>Speedometer registers its own dedicated <code>speedometer</code> option inside Minecraft's native <code>DebugScreenEntries</code> system (<code>F3 + F6</code>). It operates completely on its own — requiring zero external libraries or vanilla <code>player_speed</code> entries.</p>
 <blockquote>
-  <strong>ℹ️ No dependency on <code>player_speed</code>:</strong> Speedometer works on <strong>all Minecraft versions 26.2+</strong>, whether or not vanilla's <code>player_speed</code> entry exists.
+  <strong>ℹ️ Native Integration:</strong> Registered as a first-class debug entry in Minecraft's debug overlay system — not a hacky screen overlay.
 </blockquote>
 
-<h3>🛠️ Smart Layouts (F3 + F6)</h3>
-<p>Three display modes, controlled entirely through vanilla's <strong>F3 Debug Options Screen</strong> (<code>F3 + F6</code>). No config files. No commands. Just toggle what you want:</p>
+<h3>🛠️ Smart Display Layouts (F3 + F6)</h3>
+<p>Choose your preferred display mode directly in the in-game <strong>F3 Debug Options Screen</strong> (<code>F3 + F6</code>):</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer Only" width="48%">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both Speedometer and Player Speed Enabled" width="48%">
+</p>
+
 <ol>
-  <li><strong>Speedometer only</strong> <em>(default — works on all versions)</em>:
-    <pre><code>Speed: 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
-    <p align="center">
-      <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer only — no player_speed" width="500">
-    </p>
-    <p align="center"><em>Speedometer only — clean standalone blocks/sec output with no vanilla <code>player_speed</code> needed.</em></p>
+  <li><strong>Speedometer Only</strong> <em>(Default — all versions)</em>:
+    <pre><code>Speed: 58.79 b/s (H: 58.62, V: 4.47)</code></pre>
   </li>
-  <li><strong>Both Speedometer + vanilla Player Speed</strong> <em>(26.3+ only — smart consolidated line)</em>:
-    <pre><code>Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)</code></pre>
+  <li><strong>Both Enabled (Smart Consolidation)</strong> <em>(26.3+)</em>:
+    <pre><code>Speed: 2.049 blocks/tick, 40.97 b/s (H: 37.46, V: 16.60)</code></pre>
   </li>
-  <li><strong>Vanilla Player Speed only</strong> <em>(26.3+ only — unchanged, your choice)</em>:
+  <li><strong>Vanilla Player Speed Only</strong> <em>(26.3+)</em>:
     <pre><code>Speed: 0.215 blocks/tick</code></pre>
   </li>
 </ol>
+
 <blockquote>
-  <strong>💡 Smart Consolidation:</strong> When both entries are enabled on 26.3+, they automatically merge onto a <strong>single line</strong> — no duplicate clutter, no wasted HUD space.
+  <strong>💡 Smart Consolidation:</strong> When both <code>player_speed</code> and <code>speedometer</code> are enabled in F3 options, they automatically merge into a single clean line to save HUD space.
 </blockquote>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both player_speed and speedometer enabled — combined output" width="600">
-</p>
-<p align="center"><em>Both <code>player_speed</code> and <code>speedometer</code> enabled simultaneously — one clean consolidated line.</em></p>
+<h3>📌 ALWAYS_ON HUD Pinning</h3>
+<p>Want to track your speed without keeping the entire F3 debug wall open? Toggle <code>speedometer</code> to <strong><code>Always</code></strong> in the <code>F3 + F6</code> menu to keep a minimal speedometer pinned to your screen at all times.</p>
 
-<h3>📌 ALWAYS_ON HUD Support</h3>
-<p>Don't want to keep F3 open? Set <code>speedometer</code> to <strong><code>Always</code></strong> in the F3 Debug Options Screen and your speedometer stays pinned to the screen permanently — even when the full F3 debug overlay is closed.</p>
+<h3>📐 Dynamic Scaling &amp; Jitter-Free Physics</h3>
+<p>Unlike static formatted debug text, Speedometer uses dynamic string sizing that expands and shrinks flawlessly as your velocity changes. By sampling vanilla's pre-calculated <code>Entity.getKnownSpeed()</code> vector once per tick, it provides smooth, jitter-free output with <strong>zero performance overhead</strong>.</p>
 
-<h3>📐 Dynamic &amp; Jitter-Free</h3>
-<p>Powered by vanilla's own pre-calculated physics tick vector (<code>Entity.getKnownSpeed()</code>), which updates exactly <strong>20 times per second</strong> in sync with the physics engine. The display string dynamically scales — no fixed-width space padding, no frame-rate jitter, no flickering.</p>
-<blockquote>
-  <strong>ℹ️ Zero extra performance cost:</strong> We read vanilla's already-computed velocity vector. No redundant physics calculations are performed.
-</blockquote>
-
-<h3>↔️ H &amp; V Speed Breakdown</h3>
-<p>The speedometer shows three values at a glance:</p>
+<h3>↔️ Horizontal (H) &amp; Vertical (V) Breakdown</h3>
+<p>Get instant insight into your movement dynamics:</p>
 <ul>
-  <li><strong>Total Speed</strong> — your full 3D movement velocity in blocks per second</li>
-  <li><strong>H (Horizontal)</strong> — ground movement speed across the X/Z plane (walking, sprinting, flying, riding)</li>
-  <li><strong>V (Vertical)</strong> — fall or climb speed on the Y axis (jumping, falling, Elytra pitching)</li>
+  <li><strong>Total Speed</strong>: Complete 3D velocity vector magnitude.</li>
+  <li><strong>H (Horizontal)</strong>: Ground, sprinting, and lateral movement speed.</li>
+  <li><strong>V (Vertical)</strong>: Jump height velocity, falling speed, and Elytra pitch rate.</li>
 </ul>
 
-<h3>🚗 Vehicle &amp; Riding Support</h3>
-<p>Speedometer accurately tracks movement while riding any vehicle — horses, minecarts, boats, striders, pigs. It reads the vehicle's velocity when you're a passenger, not your own entity's.</p>
+<h3>🚗 Vehicle &amp; Mount Tracking</h3>
+<p>Speedometer automatically detects when you are riding a horse, minecart, boat, pig, or strider, tracking the vehicle's actual movement velocity instead of player entity position.</p>
 
 <h3>🪶 100% Zero Dependencies</h3>
-<p>Drop the JAR in your mods folder and done. No Fabric API. No Cloth Config. No DasikLibrary. No anything — just Fabric Loader.</p>
+<p>Built for pure performance. No Fabric API required. No Cloth Config. No third-party library dependencies. Just drop the JAR into your <code>mods</code> folder.</p>
 
 <hr>
 
@@ -108,11 +107,8 @@
   <li>Install <strong><a href="https://fabricmc.net/use/installer/">Fabric Loader</a></strong>.</li>
   <li>Download the latest <strong>Speedometer</strong> JAR for your Minecraft version.</li>
   <li>Place the JAR in your <code>.minecraft/mods</code> folder.</li>
-  <li>Launch Minecraft — press <code>F3</code> and your speedometer is there.</li>
+  <li>Launch Minecraft — press <code>F3</code> (or <code>F3 + F6</code> to configure).</li>
 </ol>
-<blockquote>
-  <strong>💡 Optional:</strong> Press <code>F3 + F6</code> to open the Debug Options Screen and configure whether <code>speedometer</code> shows <code>Always</code>, <code>In Overlay</code>, or <code>OFF</code>.
-</blockquote>
 
 <hr>
 
@@ -125,7 +121,7 @@
   <tbody>
     <tr><td>Singleplayer</td><td align="center">✅</td></tr>
     <tr><td>Multiplayer (LAN/Server)</td><td align="center">✅</td></tr>
-    <tr><td>Vanilla Clients</td><td align="center">✅</td></tr>
+    <tr><td>Vanilla Servers</td><td align="center">✅</td></tr>
     <tr><td>Dedicated Server Only</td><td align="center">❌ (client mod)</td></tr>
     <tr><td><strong>IG: Max Elytra Fly Speed</strong></td><td align="center">✅</td></tr>
     <tr><td><strong>IG: Creative Hyper Speed</strong></td><td align="center">✅</td></tr>

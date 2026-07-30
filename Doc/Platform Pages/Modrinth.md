@@ -7,89 +7,75 @@
 
 # ⚡ Speedometer
 
+> **Player Speed but blocks per second.**
+
 **Active Version Policy:** I build **1 JAR for 1 Version**. I only update and maintain the latest active Minecraft version (e.g. when 26.3 is released, 26.2 is retired). No backports or legacy version maintenance. Please do not ask.
 
-**The Vanilla Problem:** The vanilla `player_speed` F3 entry shows your speed in **blocks/tick** — a physics unit that means nothing to most players. `0.215 blocks/tick` doesn't tell you how fast you're actually moving. Is that fast? Is that slow? Nobody knows.
+Every Minecraft player knows the frustration: you press F3, look for your speed, and vanilla gives you `0.215 blocks/tick`. A raw physics calculation unit that means nothing during normal gameplay. Is that fast? Is that slow? How fast are you actually flying with Elytra or riding a horse?
 
-**Speedometer** fixes this by adding a dedicated F3 debug entry that shows your speed in **blocks per second** — the same unit your brain actually understands. It works fully independently, uses vanilla's own tick-based physics data, and even consolidates with `player_speed` into a single clean line on Minecraft 26.3+.
+**Speedometer** fixes this foundation. It adds a native F3 debug entry that converts your movement into real-world readable **blocks per second (b/s)**. Powered directly by vanilla's 20 tps physics engine (`getKnownSpeed()`), it updates dynamically, breaks down horizontal vs vertical velocity, works on vehicles, and seamlessly consolidates with vanilla's `player_speed` on Minecraft 26.3+.
+
+Part of the **Vanilla Outsider Collection** — mods that refine the vanilla experience with modern standards.
 
 ---
 
-## 🎬 Showcase
+## 🎬 Showcase Video
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Y1DDyWD-5es" title="Speedometer Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-*Speedometer in action — combined with a max Elytra speed mod. Works independently on its own, or consolidates with vanilla's `player_speed` into a single clean line when both are enabled.*
+*Click the player above to watch the mod showcase in action!*
 
 ---
 
 ## ✨ Features
 
-### ⚡ Fully Independent
-
-Speedometer registers its own dedicated `speedometer` entry in Minecraft's native `DebugScreenEntries` system — completely separate from, and not requiring, vanilla's `player_speed`. Install it and it just works.
+### ⚡ Fully Independent F3 Debug Entry
+Speedometer registers its own dedicated `speedometer` option inside Minecraft's native `DebugScreenEntries` system (`F3 + F6`). It operates completely on its own — requiring zero external libraries or vanilla `player_speed` entries.
 
 > [!NOTE]
-> **No dependency on `player_speed`**: Speedometer works on **all Minecraft versions 26.2+**, whether or not vanilla's `player_speed` entry exists.
+> **Native Integration**: Registered as a first-class debug entry in Minecraft's debug overlay system — not a hacky screen overlay.
 
-### 🛠️ Smart Layouts (F3 + F6)
+### 🛠️ Smart Display Layouts (F3 + F6)
+Choose your preferred display mode directly in the in-game **F3 Debug Options Screen** (`F3 + F6`):
 
-Three display modes, controlled entirely through vanilla's **F3 Debug Options Screen** (`F3 + F6`). No config files. No commands. Just toggle what you want:
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer Only" width="48%">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both Speedometer and Player Speed Enabled" width="48%">
+</p>
 
-1. **Speedometer only** *(default — works on all versions)*:
-   `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
-2. **Both Speedometer + vanilla Player Speed** *(26.3+ only — smart consolidated line)*:
-   `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
-3. **Vanilla Player Speed only** *(26.3+ only — unchanged, your choice)*:
+1. **Speedometer Only** *(Default — all versions)*:
+   `Speed: 58.79 b/s (H: 58.62, V: 4.47)`
+2. **Both Enabled (Smart Consolidation)** *(26.3+)*:
+   `Speed: 2.049 blocks/tick, 40.97 b/s (H: 37.46, V: 16.60)`
+3. **Vanilla Player Speed Only** *(26.3+)*:
    `Speed: 0.215 blocks/tick`
 
 > [!TIP]
-> **Smart Consolidation**: When both entries are enabled on 26.3+, they automatically merge onto a **single line** — no duplicate clutter, no wasted HUD space.
+> **Smart Consolidation**: When both `player_speed` and `speedometer` are enabled in F3 options, they automatically merge into a single clean line to save HUD space.
 
-**Speedometer only:**
+### 📌 ALWAYS_ON HUD Pinning
+Want to track your speed without keeping the entire F3 debug wall open? Toggle `speedometer` to **`Always`** in the `F3 + F6` menu to keep a minimal speedometer pinned to your screen at all times.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer only — no player_speed" width="500">
-</p>
+### 📐 Dynamic Scaling & Jitter-Free Physics
+Unlike static formatted debug text, Speedometer uses dynamic string sizing that expands and shrinks flawlessly as your velocity changes. By sampling vanilla's pre-calculated `Entity.getKnownSpeed()` vector once per tick, it provides smooth, jitter-free output with **zero performance overhead**.
 
-**Both enabled (consolidated):**
+### ↔️ Horizontal (H) & Vertical (V) Breakdown
+Get instant insight into your movement dynamics:
+- **Total Speed**: Complete 3D velocity vector magnitude.
+- **H (Horizontal)**: Ground, sprinting, and lateral movement speed.
+- **V (Vertical)**: Jump height velocity, falling speed, and Elytra pitch rate.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both player_speed and speedometer enabled — combined output" width="600">
-</p>
-
-### 📌 ALWAYS_ON HUD Support
-
-Don't want to keep F3 open? Set `speedometer` to **`Always`** in the F3 Debug Options Screen and your speedometer stays pinned to the screen permanently — even when the full F3 debug overlay is closed.
-
-### 📐 Dynamic & Jitter-Free
-
-Powered by vanilla's own pre-calculated physics tick vector (`Entity.getKnownSpeed()`), which updates exactly **20 times per second** in sync with the physics engine. The display string dynamically scales — no fixed-width space padding, no frame-rate jitter, no flickering.
-
-> [!NOTE]
-> **Zero extra performance cost**: We read vanilla's already-computed velocity vector. No redundant physics calculations are performed.
-
-### ↔️ H & V Speed Breakdown
-
-The speedometer shows three values at a glance:
-- **Total Speed** — your full 3D movement velocity in blocks per second
-- **H (Horizontal)** — ground movement speed across the X/Z plane (walking, sprinting, flying, riding)
-- **V (Vertical)** — fall or climb speed on the Y axis (jumping, falling, Elytra pitching)
-
-### 🚗 Vehicle & Riding Support
-
-Speedometer accurately tracks movement while riding any vehicle — horses, minecarts, boats, striders, pigs. It reads the vehicle's velocity when you're a passenger, not your own entity's.
+### 🚗 Vehicle & Mount Tracking
+Speedometer automatically detects when you are riding a horse, minecart, boat, pig, or strider, tracking the vehicle's actual movement velocity instead of player entity position.
 
 ### 🪶 100% Zero Dependencies
-
-Drop the JAR in your mods folder and done. No Fabric API. No Cloth Config. No DasikLibrary. No anything — just Fabric Loader.
+Built for pure performance. No Fabric API required. No Cloth Config. No third-party library dependencies. Just drop the JAR into your `mods` folder.
 
 ---
 
 ## 📦 Installation & Environment
 
 ### ⚛️ Environment Support
-
 * [x] **Client-side only**: All functionality is done client-side and is compatible with vanilla servers.
   * [x] Works in singleplayer too
   * [x] Works in multiplayer (you see your own speed)
@@ -97,14 +83,10 @@ Drop the JAR in your mods folder and done. No Fabric API. No Cloth Config. No Da
 * [ ] **Client and server**
 
 ### 📥 Install Instructions
-
 1. Install **[Fabric Loader](https://fabricmc.net/use/installer/)**.
 2. Download the latest **Speedometer** JAR for your Minecraft version.
 3. Place the JAR in your `.minecraft/mods` folder.
-4. Launch Minecraft — press `F3` and your speedometer is there.
-
-> [!TIP]
-> **Optional**: Press `F3 + F6` to open the Debug Options Screen and configure whether `speedometer` shows `Always`, `In Overlay`, or `OFF`.
+4. Launch Minecraft — press `F3` (or `F3 + F6` to configure).
 
 ---
 
@@ -114,7 +96,7 @@ Drop the JAR in your mods folder and done. No Fabric API. No Cloth Config. No Da
 | :--- | :---: |
 | Singleplayer | ✅ |
 | Multiplayer (LAN/Server) | ✅ |
-| Vanilla Clients | ✅ |
+| Vanilla Servers | ✅ |
 | Dedicated Server Only | ❌ (client mod) |
 | **IG: Max Elytra Fly Speed** | ✅ |
 | **IG: Creative Hyper Speed** | ✅ |
