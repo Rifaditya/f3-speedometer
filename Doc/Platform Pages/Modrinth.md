@@ -38,11 +38,6 @@ Speedometer registers its own dedicated `speedometer` option inside Minecraft's 
 ### 🛠️ Smart Display Layouts (F3 + F6)
 Choose your preferred display mode directly in the in-game **F3 Debug Options Screen** (`F3 + F6`):
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer Only" width="48%">
-  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both Speedometer and Player Speed Enabled" width="48%">
-</p>
-
 1. **Speedometer Only** *(Default — all versions)*:
    `Speed: 58.79 b/s (H: 58.62, V: 4.47)`
 2. **Both Enabled (Smart Consolidation)** *(26.3+)*:
@@ -52,6 +47,18 @@ Choose your preferred display mode directly in the in-game **F3 Debug Options Sc
 
 > [!TIP]
 > **Smart Consolidation**: When both `player_speed` and `speedometer` are enabled in F3 options, they automatically merge into a single clean line to save HUD space.
+
+**Speedometer Only (Standalone):**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_speedometer_only.png" alt="Speedometer Only" width="100%">
+</p>
+
+**Both Enabled (Consolidated):**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Rifaditya/f3-speedometer/main/Doc/Assets/screenshot_combined.png" alt="Both Speedometer and Player Speed Enabled" width="100%">
+</p>
 
 ### 📌 ALWAYS_ON HUD Pinning
 Want to track your speed without keeping the entire F3 debug wall open? Toggle `speedometer` to **`Always`** in the `F3 + F6` menu to keep a minimal speedometer pinned to your screen at all times.
