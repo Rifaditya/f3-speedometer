@@ -2,6 +2,11 @@
 
 ## Version History
 
+### 1.2.8+26.2 (2026-08-25)
+- **Status**: Stable Release
+- **Minecraft Version**: 26.2
+- **Summary**: Added Portuguese (`pt_br`, `pt_pt`) in-game localization assets and player guide.
+
 ### 1.2.7+26.2 (2026-08-25)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2

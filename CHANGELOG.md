@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.8+26.2] - 2026-08-25
+
+### Added
+- Added native Portuguese (`pt_br`, `pt_pt`) translation assets and Portuguese player guide.
+
 ## [1.2.7+26.2] - 2026-08-25
 
 ### Added

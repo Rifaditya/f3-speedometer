@@ -2,6 +2,7 @@
 
 | Version | Status | Date | Target MC | Notes |
 | :--- | :--- | :--- | :--- | :--- |
+| `1.2.8+26.2` | PENDING | 2026-08-25 | 26.2 | Added Portuguese (pt_br, pt_pt) localization |
 | `1.2.7+26.2` | PENDING | 2026-08-25 | 26.2 | Added German (de_de) localization |
 | `1.2.6+26.2` | PENDING | 2026-08-25 | 26.2 | Added Spanish (es_es, es_mx) localization |
 | `1.2.5+26.2` | PENDING | 2026-08-25 | 26.2 | Added Russian (ru_ru) localization |
