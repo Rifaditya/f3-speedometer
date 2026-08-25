@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.5+26.2] - 2026-08-25
+
+### Added
+- Added native Russian (`ru_ru`) translation assets and Russian player guide.
+
 ## [1.2.4+26.2] - 2026-08-25
 
 ### Added
