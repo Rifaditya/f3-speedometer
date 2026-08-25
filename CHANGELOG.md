@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.4+26.2] - 2026-08-25
+
+### Added
+- Added native Traditional Chinese (`zh_tw`) translation assets and documentation.
+
 ## [1.2.3-26.2] - 2026-08-25
 
 ### Added
