@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.12+26.2] - 2026-08-25
+
+### Added
+- Added native Korean (`ko_kr`) translation assets and Korean player guide.
+
 ## [1.2.11+26.2] - 2026-08-25
 
 ### Added

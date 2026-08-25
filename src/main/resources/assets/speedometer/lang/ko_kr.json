@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "속도계",
+  "modmenu.nameTranslation.speedometer": "속도계",
+  "modmenu.descriptionTranslation.speedometer": "플레이어의 이동 속도를 초당 블록 수 (b/s)로 실시간 표시합니다."
+}

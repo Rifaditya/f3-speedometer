@@ -2,6 +2,7 @@
 
 | Version | Status | Date | Target MC | Notes |
 | :--- | :--- | :--- | :--- | :--- |
+| `1.2.12+26.2` | PENDING | 2026-08-25 | 26.2 | Added Korean (ko_kr) localization |
 | `1.2.11+26.2` | PENDING | 2026-08-25 | 26.2 | Added French (fr_fr, fr_ca) localization |
 | `1.2.10+26.2` | PENDING | 2026-08-25 | 26.2 | Added Indonesian (id_id) localization |
 | `1.2.9+26.2` | PENDING | 2026-08-25 | 26.2 | Added Japanese (ja_jp) localization |
