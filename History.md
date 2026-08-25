@@ -2,6 +2,11 @@
 
 ## Version History
 
+### 1.2.3-26.2 (2026-08-25)
+- **Status**: Stable Release
+- **Minecraft Version**: 26.2
+- **Summary**: Added Simplified Chinese (zh_cn) in-game localization assets and Chinese player documentation.
+
 ### 1.2.2-26.2 (2026-07-21)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2

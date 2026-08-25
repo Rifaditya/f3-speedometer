@@ -1,5 +1,12 @@
 # Changelog - Speedometer
 
+## [1.2.3-26.2] - 2026-08-25
+
+### Added
+- Added native Simplified Chinese (zh_cn) translation assets for in-game F3 debug options menu (F3 + F6) and Mod Menu metadata.
+- Added base English (en_us) language asset file for standard localization mapping.
+- Added Simplified Chinese player guide documentation (Doc/Players/index_zh_cn.md).
+
 ## [1.2.2-26.2] - 2026-07-21
 
 ### Changed

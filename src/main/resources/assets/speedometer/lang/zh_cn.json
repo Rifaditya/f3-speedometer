@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "速度计",
+  "modmenu.nameTranslation.speedometer": "速度计",
+  "modmenu.descriptionTranslation.speedometer": "以每秒方块数 (b/s) 实时显示玩家移动速度。"
+}
