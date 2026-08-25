@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.7+26.2] - 2026-08-25
+
+### Added
+- Added native German (`de_de`) translation assets and German player guide.
+
 ## [1.2.6+26.2] - 2026-08-25
 
 ### Added
