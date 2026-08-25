@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.11+26.2] - 2026-08-25
+
+### Added
+- Added native French (`fr_fr`, `fr_ca`) translation assets and French player guide.
+
 ## [1.2.10+26.2] - 2026-08-25
 
 ### Added
