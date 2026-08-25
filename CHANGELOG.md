@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.9+26.2] - 2026-08-25
+
+### Added
+- Added native Japanese (`ja_jp`) translation assets and Japanese player guide.
+
 ## [1.2.8+26.2] - 2026-08-25
 
 ### Added

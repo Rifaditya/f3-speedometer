@@ -2,6 +2,11 @@
 
 ## Version History
 
+### 1.2.9+26.2 (2026-08-25)
+- **Status**: Stable Release
+- **Minecraft Version**: 26.2
+- **Summary**: Added Japanese (`ja_jp`) in-game localization assets and player guide.
+
 ### 1.2.8+26.2 (2026-08-25)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2
