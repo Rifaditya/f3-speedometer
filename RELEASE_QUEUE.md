@@ -2,6 +2,7 @@
 
 | Version | Status | Date | Target MC | Notes |
 | :--- | :--- | :--- | :--- | :--- |
+| `1.2.6+26.2` | PENDING | 2026-08-25 | 26.2 | Added Spanish (es_es, es_mx) localization |
 | `1.2.5+26.2` | PENDING | 2026-08-25 | 26.2 | Added Russian (ru_ru) localization |
 | `1.2.4+26.2` | PENDING | 2026-08-25 | 26.2 | Added Traditional Chinese (zh_tw) localization |
 | 1.2.3-26.2 | PENDING | 2026-08-25 | 26.2 | Added Simplified Chinese (zh_cn) localization and language assets |

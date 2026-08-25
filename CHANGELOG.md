@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.6+26.2] - 2026-08-25
+
+### Added
+- Added native Spanish (`es_es`, `es_mx`, `es_ar`, `es_cl`, etc.) translation assets and Spanish player guide.
+
 ## [1.2.5+26.2] - 2026-08-25
 
 ### Added

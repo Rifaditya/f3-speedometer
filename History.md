@@ -2,6 +2,11 @@
 
 ## Version History
 
+### 1.2.6+26.2 (2026-08-25)
+- **Status**: Stable Release
+- **Minecraft Version**: 26.2
+- **Summary**: Added Spanish in-game localization assets and player guide.
+
 ### 1.2.5+26.2 (2026-08-25)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2
