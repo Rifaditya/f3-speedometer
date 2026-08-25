@@ -1,5 +1,10 @@
 # Changelog - Speedometer
 
+## [1.2.10+26.2] - 2026-08-25
+
+### Added
+- Added native Indonesian (`id_id`) translation assets and Indonesian player guide.
+
 ## [1.2.9+26.2] - 2026-08-25
 
 ### Added
