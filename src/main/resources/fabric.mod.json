@@ -1,28 +1,36 @@
 {
-  "schemaVersion": 1,
-  "id": "speedometer",
-  "version": "${version}",
-  "name": "Speedometer",
-  "description": "Player Speed but blocks per second.",
-  "authors": [
-    "Dasik (Rifaditya)"
-  ],
-  "contact": {
-    "homepage": "https://github.com/Rifaditya/speedometer"
-  },
-  "license": "GPL-3.0-or-later",
-  "icon": "assets/speedometer/icon.png",
-  "environment": "client",
-  "entrypoints": {
-    "client": [
-      "net.vanillaoutsider.speedometer.client.SpeedometerClient"
-    ]
-  },
-  "mixins": [
-    "speedometer.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=0.15.0",
-    "minecraft": ">=26.2"
-  }
+    "schemaVersion": 1,
+    "id": "speedometer",
+    "version": "${version}",
+    "name": "Speedometer",
+    "description": "Player Speed but blocks per second.",
+    "authors": [
+        "Dasik (Rifaditya)"
+    ],
+    "contact": {
+        "homepage": "https://github.com/Rifaditya/speedometer"
+    },
+    "license": "GPL-3.0-or-later",
+    "icon": "assets/speedometer/icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "net.vanillaoutsider.speedometer.client.SpeedometerClient"
+        ]
+    },
+    "mixins": [
+        "speedometer.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.15.0",
+        "minecraft": ">=26.2"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.donate": "https://ko-fi.com/dasikigaijin",
+                "modmenu.kofi": "https://ko-fi.com/dasikigaijin"
+            }
+        }
+    }
 }
