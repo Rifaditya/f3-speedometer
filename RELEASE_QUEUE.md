@@ -7,7 +7,7 @@
 | `1.2.10+26.2` | PENDING | 2026-08-25 | 26.2 | Added Indonesian (id_id) localization |
 | `1.2.9+26.2` | PENDING | 2026-08-25 | 26.2 | Added Japanese (ja_jp) localization |
 | `1.2.8+26.2` | PENDING | 2026-08-25 | 26.2 | Added Portuguese (pt_br, pt_pt) localization |
-| `1.2.7+26.2` | PENDING | 2026-08-25 | 26.2 | Added German (de_de) localization |
+| `1.2.7+26.2` | RELEASED | 2026-08-25 | 26.2 | Added German (de_de) localization |
 | `1.2.6+26.2` | RELEASED | 2026-08-25 | 26.2 | Added Spanish (es_es, es_mx) localization |
 | `1.2.5+26.2` | RELEASED | 2026-08-25 | 26.2 | Added Russian (ru_ru) localization |
 | `1.2.4+26.2` | PENDING | 2026-08-25 | 26.2 | Added Traditional Chinese (zh_tw) localization |
