@@ -1,0 +1,44 @@
+{
+    "schemaVersion": 1,
+    "id": "speedometer",
+    "version": "${version}",
+    "name": "Speedometer",
+    "description": "Player Speed but blocks per second.",
+    "authors": [
+        "Dasik (Rifaditya)"
+    ],
+    "contact": {
+        "homepage": "https://modrinth.com/mod/vo-speedometer",
+        "sources": "https://github.com/Rifaditya/f3-speedometer",
+        "issues": "https://github.com/Rifaditya/f3-speedometer/issues"
+    },
+    "license": "GPL-3.0-or-later",
+    "icon": "assets/speedometer/icon.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "net.vanillaoutsider.speedometer.client.SpeedometerClient"
+        ]
+    },
+    "mixins": [
+        "speedometer.mixins.json"
+    ],
+    "custom": {
+        "modrinth": {
+            "projectId": "z9YkBUIj",
+            "slug": "vo-speedometer"
+        },
+        "modmenu": {
+            "links": {
+                "modmenu.donate": "https://ko-fi.com/dasikigaijin",
+                "modmenu.kofi": "https://ko-fi.com/dasikigaijin"
+            }
+        }
+    },
+    "depends": {
+        "fabricloader": ">=0.16.9",
+        "fabric-api": "*",
+        "minecraft": ">=26.3-",
+        "java": ">=25"
+    }
+}

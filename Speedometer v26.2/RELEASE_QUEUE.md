@@ -2,7 +2,6 @@
 
 | Version | Status | Date | Target MC | Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| `1.2.12+26.3` | PENDING | 2026-09-14 | 26.3 | Ported Speedometer to Minecraft 26.3 snapshot-6 |
 | `1.2.12+26.2` | RELEASED | 2026-08-25 | 26.2 | Added Korean (ko_kr) localization |
 | `1.2.11+26.2` | RELEASED | 2026-08-25 | 26.2 | Added French (fr_fr, fr_ca) localization |
 | `1.2.10+26.2` | RELEASED | 2026-08-25 | 26.2 | Added Indonesian (id_id) localization |

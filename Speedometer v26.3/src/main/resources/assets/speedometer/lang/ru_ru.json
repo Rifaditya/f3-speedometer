@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "Спидометр",
+  "modmenu.nameTranslation.speedometer": "Спидометр",
+  "modmenu.descriptionTranslation.speedometer": "Отображает скорость передвижения игрока в блоках в секунду (б/с)."
+}

@@ -1,13 +1,5 @@
 # Changelog - Speedometer
 
-## [1.2.12+26.3] - 2026-09-14
-
-### Added
-- **Minecraft 26.3 Port**: Initial release supporting Minecraft 26.3 snapshot-6.
-- **Dependency Upgrades**: Compiled against Fabric Loader 0.19.3 and Fabric API 0.156.1+26.3.
-- **Java 25 Baseline**: Upgraded toolchain and execution target to Java 25.
-- **Multi-Version Restructure**: Standardized multi-version project structure into `Speedometer v26.2` and `Speedometer v26.3`.
-
 ## [1.2.12+26.2] - 2026-08-25
 
 ### Added
