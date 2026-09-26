@@ -1,5 +1,19 @@
 # Changelog - Speedometer
 
+## [1.2.13+26.3] - 2026-09-24
+
+### Added
+- **Dasik Library Integration**: Integrated Dasik Library as a runtime dependency for unified creator support and social links.
+- **Support & Community Links**: Added community Discord and Ko-fi creator support links to Mod Menu configuration and client initialization.
+- **Automated Verification**: Integrated automated headless unit testing suite for velocity vector math and HUD formatting.
+
+## [1.2.13+26.2] - 2026-09-24
+
+### Added
+- **Dasik Library Integration**: Integrated Dasik Library as a runtime dependency for unified creator support and social links.
+- **Support & Community Links**: Added community Discord and Ko-fi creator support links to Mod Menu configuration and client initialization.
+- **Automated Verification**: Integrated automated headless unit testing suite for velocity vector math and HUD formatting.
+
 ## [1.2.12+26.3] - 2026-09-14
 
 ### Added

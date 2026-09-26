@@ -14,3 +14,5 @@ Archive Jar of all versions/
 *.jar
 Doc/Marketing/
 hype_*.md
+logs/
+*/logs/

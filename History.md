@@ -2,6 +2,16 @@
 
 ## Version History
 
+### 1.2.13+26.3 (2026-09-24)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 26.3
+- **Summary**: Implemented [BL-SP-002]: Adopted Dasik Library 1.9.2 runtime dependency, added creator support integration, and added headless JUnit 5 calculation test suite.
+
+### 1.2.13+26.2 (2026-09-24)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 26.2
+- **Summary**: Implemented [BL-SP-001]: Adopted Dasik Library 1.9.2 runtime dependency, added creator support integration, and added headless JUnit 5 calculation test suite.
+
 ### 1.2.12+26.2 (2026-08-25)
 - **Status**: Stable Release
 - **Minecraft Version**: 26.2

@@ -1,3 +1,4 @@
+// Speedometer v26.3 settings
 pluginManagement {
     repositories {
         maven { url 'https://maven.fabricmc.net/' }
