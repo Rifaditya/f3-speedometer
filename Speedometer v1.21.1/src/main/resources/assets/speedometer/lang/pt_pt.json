@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "Velocímetro",
+  "modmenu.nameTranslation.speedometer": "Velocímetro",
+  "modmenu.descriptionTranslation.speedometer": "Exibe a velocidade de movimento do jogador em blocos por segundo (b/s)."
+}

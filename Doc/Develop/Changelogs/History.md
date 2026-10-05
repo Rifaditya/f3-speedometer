@@ -2,6 +2,30 @@
 
 ## Version History
 
+### 1.2.13+1.21.1 (2026-10-05)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 1.21.1
+- **Backlog Reference**: [BL-SP-003] Multi-Era Anchor Porting: Speedometer (Step B3)
+- **Summary**:
+  - Ported Speedometer to Minecraft 1.21.1 under the 6-Point Genesis Protocol.
+  - Scaffolded standalone subproject `Speedometer v1.21.1/` targeting Fabric Loader 0.16.0, Loom 1.10.2 (`fabric-loom`), Fabric API 0.102.0+1.21.1, official Mojang mappings, Java 21, and Dasik Library 1.1.0+1.21.1.
+  - Adapted F3 debug overlay using `DebugScreenOverlayMixin` injecting into `getGameInformation` at `@At("RETURN")` for real-time blocks/second (b/s) velocity display.
+  - Passed all headless calculation unit tests and verified binary build `speedometer-1.2.13+1.21.1.jar`.
+  - Executed 4-Point Distribution (Local Archive, Collection Archive, Release Hub, and External Vault `D:\`).
+  - Registered release in `Speedometer v1.21.1/RELEASE_QUEUE.md` and root `MASTER_RELEASE_QUEUE.md`.
+
+### 1.2.13+1.21.11 (2026-10-05)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 1.21.11
+- **Backlog Reference**: [BL-SP-003] Multi-Era Anchor Porting: Speedometer (Step B2)
+- **Summary**:
+  - Ported Speedometer to Minecraft 1.21.11 under the 6-Point Genesis Protocol.
+  - Scaffolded standalone subproject `Speedometer v1.21.11/` targeting Fabric Loader 0.19.3, Loom 1.15-SNAPSHOT (`net.fabricmc.fabric-loom-remap`), Fabric API 0.141.6+1.21.11, official Mojang mappings, Java 21, and Dasik Library 1.1.0+1.21.11.
+  - Adapted F3 debug overlay using native `DebugScreenEntries` registration and `DebugEntrySpeedometer` with blocks/second (b/s) calculations via `Entity.getKnownSpeed()`.
+  - Passed all headless calculation unit tests and verified binary build `speedometer-1.2.13+1.21.11.jar`.
+  - Executed 4-Point Distribution (Local Archive, Collection Archive, Release Hub, and External Vault `D:\`).
+  - Registered release in `Speedometer v1.21.11/RELEASE_QUEUE.md` and root `MASTER_RELEASE_QUEUE.md`.
+
 ### 1.2.13+26.1.2 (2026-10-05)
 - **Status**: Stable Release Candidate
 - **Minecraft Version**: 26.1.2

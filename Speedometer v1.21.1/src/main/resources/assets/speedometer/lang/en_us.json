@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "Speed: %s b/s (H: %s, V: %s)",
+  "modmenu.nameTranslation.speedometer": "Speedometer",
+  "modmenu.descriptionTranslation.speedometer": "Player Speed but blocks per second."
+}
