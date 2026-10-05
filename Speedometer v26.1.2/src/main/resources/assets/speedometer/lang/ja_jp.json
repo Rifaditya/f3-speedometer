@@ -1,0 +1,5 @@
+{
+  "debug.entry.speedometer": "スピードメーター",
+  "modmenu.nameTranslation.speedometer": "スピードメーター",
+  "modmenu.descriptionTranslation.speedometer": "プレイヤーの移動速度を1秒あたりのブロック数 (b/s) で表示します。"
+}

@@ -2,6 +2,18 @@
 
 ## Version History
 
+### 1.2.13+26.1.2 (2026-10-05)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 26.1.2
+- **Backlog Reference**: [BL-SP-003] Multi-Era Anchor Porting: Speedometer (Step B1)
+- **Summary**:
+  - Ported Speedometer to Minecraft 26.1 / 26.1.2 under the 6-Point Genesis Protocol.
+  - Scaffolded standalone subproject `Speedometer v26.1.2/` targeting Fabric Loader 0.19.1, Fabric API 0.145.4+26.1.2, Java 25, and Dasik Library 1.9.2.
+  - Added compile-time shims for `EntityLoadData` and `PermissionContextOwner` to satisfy javac interface resolution from Dasik Library 1.9.2.
+  - Passed all headless calculation unit tests and verified binary build `speedometer-1.2.13+26.1.2.jar`.
+  - Executed 4-Point Distribution (Local Archive, Collection Archive, Release Hub, and External Vault `D:\`).
+  - Registered release in `Speedometer v26.1.2/RELEASE_QUEUE.md` and root `MASTER_RELEASE_QUEUE.md`.
+
 ### Repository Root Cleanup (2026-10-05)
 - **Status**: Internal Architecture Maintenance
 - **Scope**: Repository Root (No SemVer bump)
