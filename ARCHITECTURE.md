@@ -2,6 +2,7 @@
 
 ## 1. Multi-Version Subproject Layout
 Speedometer is organized according to the Studio Constitution's Multi-Era 1 Jar 1 Version Policy as independent standalone subprojects:
+- **MC 1.21.11 Anchor**: `Speedometer v1.21.11/` (Minecraft 1.21.11, Fabric Loader >=0.19.3, Java 21)
 - **MC 26.1.2 Anchor**: `Speedometer v26.1.2/` (Minecraft 26.1.2, Fabric Loader >=0.19.1, Java 25)
 - **MC 26.2 Anchor**: `Speedometer v26.2/` (Minecraft 26.2, Fabric Loader >=0.18.2, Java 25)
 - **MC 26.3 Anchor**: `Speedometer v26.3/` (Minecraft 26.3, Fabric Loader >=0.19.3, Java 25)
