@@ -2,6 +2,7 @@
 
 ## 1. Multi-Version Subproject Layout
 Speedometer is organized according to the Studio Constitution's Multi-Era 1 Jar 1 Version Policy as independent standalone subprojects:
+- **MC 1.20.1 Anchor**: `Speedometer v1.20.1/` (Minecraft 1.20.1, Fabric Loader >=0.15.11, Java 17)
 - **MC 1.21.1 Anchor**: `Speedometer v1.21.1/` (Minecraft 1.21.1, Fabric Loader >=0.16.0, Java 21)
 - **MC 1.21.11 Anchor**: `Speedometer v1.21.11/` (Minecraft 1.21.11, Fabric Loader >=0.19.3, Java 21)
 - **MC 26.1.2 Anchor**: `Speedometer v26.1.2/` (Minecraft 26.1.2, Fabric Loader >=0.19.1, Java 25)
@@ -16,7 +17,7 @@ Speedometer is organized according to the Studio Constitution's Multi-Era 1 Jar 
 ## 3. Bytecode Mixin Target Registry
 | Target Vanilla Class | Mixin Class | Purpose |
 | :--- | :--- | :--- |
-| `net.minecraft.client.gui.components.DebugScreenOverlay` | `net.vanillaoutsider.speedometer.mixin.DebugScreenOverlayMixin` | Injects real-time b/s velocity calculations directly into F3 debug information text (MC 1.21.1) |
+| `net.minecraft.client.gui.components.DebugScreenOverlay` | `net.vanillaoutsider.speedometer.mixin.DebugScreenOverlayMixin` | Injects real-time b/s velocity calculations directly into F3 debug information text (MC 1.20.1, MC 1.21.1) |
 | `net.minecraft.client.gui.components.debug.DebugScreenEntries` | `net.vanillaoutsider.speedometer.mixin.DebugScreenEntriesMixin` | Registers `speedometer` debug screen entry and wraps vanilla `player_speed` (MC 1.21.11+) |
 | `net.minecraft.client.gui.components.debug.DebugScreenEntryList` | `net.vanillaoutsider.speedometer.mixin.DebugScreenEntryListMixin` | Ensures speedometer status defaults to `IN_OVERLAY` on HUD rebuild (MC 1.21.11+) |
 

@@ -10,7 +10,7 @@ This file tracks planned features, technical refinements, performance optimizati
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `[BL-SP-001]` | `[TECH_DEBT]` | Update Speedometer MC 26.2 to use Dasik Library MC 26.2 | `[MEDIUM]` | `26.2` | `✅ RESOLVED` |
 | `[BL-SP-002]` | `[TECH_DEBT]` | Update Speedometer MC 26.3 to use Dasik Library MC 26.3 | `[MEDIUM]` | `26.3` | `✅ RESOLVED` |
-| `[BL-SP-003]` | `[FEATURE]` | Multi-Era Anchor Porting: Speedometer | `[HIGH]` | `Multi-Era` | `🚧 IN_PROGRESS` |
+| `[BL-SP-003]` | `[FEATURE]` | Multi-Era Anchor Porting: Speedometer | `[HIGH]` | `Multi-Era` | `✅ RESOLVED` |
 | **[BL-SP-004]** | `[TECH_DEBT]` | Downstream Ecosystem & Toolchain Alignment | `[HIGH]` | All Anchors | `✅ RESOLVED` |
 | `[BL-SP-005]` | `[BUGFIX]` | Repair MC 26.2 baseline: fabric-api compile dependency, manifest parity, publisher-readable queue | `[HIGH]` | `26.2` | `✅ RESOLVED` |
 | `[BL-SP-006]` | `[TECH_DEBT]` | Purge stale root-level legacy `src/`/`build/` single-version leftovers | `[MEDIUM]` | Repo root | `✅ RESOLVED` |
@@ -71,7 +71,7 @@ Speedometer MC 26.3 does not declare `dasik-library` as a runtime dependency.
 ### [BL-SP-003] Multi-Era Anchor Porting: Speedometer
 - **Category**: `[FEATURE]`
 - **Priority**: `[HIGH]`
-- **Status**: `🚧 IN_PROGRESS`
+- **Status**: `✅ RESOLVED`
 - **Target Component(s)**: Multi-subproject directories, `SpeedometerHud.java`, `SpeedometerConfig.java`, `SpeedCalculator.java`, `build.gradle`, `fabric.mod.json`, `RELEASE_QUEUE.md`
 - **Date Added**: 2026-09-25
 
@@ -110,20 +110,20 @@ Per Multi-Era Version Matrix and 1 Jar 1 Version Policy, port mod across all mis
   - [x] Clean binary compilation (`./gradlew build --no-daemon`)
   - [x] Mandatory Universal 4-Point Distribution (Local Archive, Hub Archive, External Vault `D:\`, Launcher Test Profile)
   - [x] Release queue registration in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md` entry
-- [ ] **Anchor: MC 1.21.1 (Java 21, Loom 1.10+, Mojang mappings, `Identifier.of`, `DataComponents`, native `Attributes.SCALE`)**
-  - [ ] Subproject directory & build script scaffolding (`build.gradle`, `gradle.properties`, `settings.gradle`)
-  - [ ] Source adaptation, API/mixin relocation, and dasik-library wiring for target version
-  - [ ] Headless unit & integration test suite pass (`./gradlew test --no-daemon`)
-  - [ ] Clean binary compilation (`./gradlew build --no-daemon`)
-  - [ ] Mandatory Universal 4-Point Distribution (Local Archive, Hub Archive, External Vault `D:\`, Launcher Test Profile)
-  - [ ] Release queue registration in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md` entry
-- [ ] **Anchor: MC 1.20.1 (Java 17, Loom 1.4-1.10, Mojang mappings, `new Identifier`, primitive NBT CompoundTag, `FabricItemSettings`, `GameRules.Category` enum)**
-  - [ ] Subproject directory & build script scaffolding (`build.gradle`, `gradle.properties`, `settings.gradle`)
-  - [ ] Source adaptation, API/mixin relocation, and dasik-library wiring for target version
-  - [ ] Headless unit & integration test suite pass (`./gradlew test --no-daemon`)
-  - [ ] Clean binary compilation (`./gradlew build --no-daemon`)
-  - [ ] Mandatory Universal 4-Point Distribution (Local Archive, Hub Archive, External Vault `D:\`, Launcher Test Profile)
-  - [ ] Release queue registration in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md` entry
+- [x] **Anchor: MC 1.21.1 (Java 21, Loom 1.10+, Mojang mappings, `Identifier.of`, `DataComponents`, native `Attributes.SCALE`)**
+  - [x] Subproject directory & build script scaffolding (`build.gradle`, `gradle.properties`, `settings.gradle`)
+  - [x] Source adaptation, API/mixin relocation, and dasik-library wiring for target version
+  - [x] Headless unit & integration test suite pass (`./gradlew test --no-daemon`)
+  - [x] Clean binary compilation (`./gradlew build --no-daemon`)
+  - [x] Mandatory Universal 4-Point Distribution (Local Archive, Hub Archive, External Vault `D:\`, Launcher Test Profile)
+  - [x] Release queue registration in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md` entry
+- [x] **Anchor: MC 1.20.1 (Java 17, Loom 1.4-1.10, Mojang mappings, `new Identifier`, primitive NBT CompoundTag, `FabricItemSettings`, `GameRules.Category` enum)**
+  - [x] Subproject directory & build script scaffolding (`build.gradle`, `gradle.properties`, `settings.gradle`)
+  - [x] Source adaptation, API/mixin relocation, and dasik-library wiring for target version
+  - [x] Headless unit & integration test suite pass (`./gradlew test --no-daemon`)
+  - [x] Clean binary compilation (`./gradlew build --no-daemon`)
+  - [x] Mandatory Universal 4-Point Distribution (Local Archive, Hub Archive, External Vault `D:\`, Launcher Test Profile)
+  - [x] Release queue registration in `RELEASE_QUEUE.md` (`- [ ]`) and `CHANGELOG.md` entry
 
 ### [BL-SP-004] Downstream Ecosystem & Toolchain Alignment: watched_projects, fabric.mod.json, Queue Segregation & Archive Hierarchy
 - **Category**: `[TECH_DEBT]`

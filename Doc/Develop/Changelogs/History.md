@@ -2,6 +2,19 @@
 
 ## Version History
 
+### 1.2.13+1.20.1 (2026-10-05)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 1.20.1
+- **Backlog Reference**: [BL-SP-003] Multi-Era Anchor Porting: Speedometer (Step B4)
+- **Summary**:
+  - Ported Speedometer to Minecraft 1.20.1 under the 6-Point Genesis Protocol.
+  - Scaffolded standalone subproject `Speedometer v1.20.1/` targeting Fabric Loader 0.15.11, Loom 1.10.2 (`fabric-loom`), Fabric API 0.92.2+1.20.1, official Mojang mappings, Java 17, and Dasik Library 1.1.0+1.20.1.
+  - Adapted F3 debug overlay using `DebugScreenOverlayMixin` injecting into `getGameInformation` at `@At("RETURN")` for real-time blocks/second (b/s) velocity display.
+  - Passed all headless calculation unit tests and verified binary build `speedometer-1.2.13+1.20.1.jar`.
+  - Executed 4-Point Distribution (Local Archive, Collection Archive, Release Hub, and External Vault `D:\`).
+  - Registered release in `Speedometer v1.20.1/RELEASE_QUEUE.md` and root `MASTER_RELEASE_QUEUE.md`.
+  - Achieved 100% Studio Anchor Parity (6/6 Anchors: 1.20.1, 1.21.1, 1.21.11, 26.1.2, 26.2, 26.3).
+
 ### 1.2.13+1.21.1 (2026-10-05)
 - **Status**: Stable Release Candidate
 - **Minecraft Version**: 1.21.1

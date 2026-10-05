@@ -14,6 +14,7 @@
 | **MC 26.1.2** | Modern Predecessor | None | `1.2.13+26.1.2` | 🟢 **Ready to Publish** | Ported to Minecraft 26.1 / 26.1.2, Dasik Library 1.9.2 integration & unit tests. |
 | **MC 1.21.11** | Anchor 1.21.11 | None | `1.2.13+1.21.11` | 🟢 **Ready to Publish** | Ported to Minecraft 1.21.11, Dasik Library 1.1.0+1.21.11 runtime integration & unit tests. |
 | **MC 1.21.1** | Anchor 1.21.1 | None | `1.2.13+1.21.1` | 🟢 **Ready to Publish** | Ported to Minecraft 1.21.1, Dasik Library 1.1.0+1.21.1 runtime integration, unit tests, and F3 overlay speed display. |
+| **MC 1.20.1** | Anchor 1.20.1 | None | `1.2.13+1.20.1` | 🟢 **Ready to Publish** | Ported to Minecraft 1.20.1, Dasik Library 1.1.0+1.20.1 runtime integration, unit tests, and F3 overlay speed display. |
 
 ---
 
