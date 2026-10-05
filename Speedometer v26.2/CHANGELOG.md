@@ -1,5 +1,17 @@
 # Changelog - Speedometer
 
+## [1.2.14+26.2] - 2026-10-05
+
+### Added
+- Integrated Dasik Library runtime dependency (`>=1.9.0`).
+- Added creator support links (Ko-fi and Discord) in Mod Menu metadata.
+- Added automated unit test suite.
+
+### Fixed
+- Fixed build dependencies with Fabric API for Minecraft 26.2.
+- Restored repository source and issue tracker links in mod metadata.
+- Configured official Modrinth project identifier mapping.
+
 ## [1.2.12+26.2] - 2026-08-25
 
 ### Added

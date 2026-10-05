@@ -9,8 +9,8 @@
 
 | Target MC | Generational Era | Live on Platforms | Next Queued Version | Status & Cadence Action | Feature Highlights / Notes |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **MC 26.3** | Modern Lead | `1.2.12+26.3` | `1.2.13+26.3` | 🟢 **Ready to Publish** | Adopted Dasik Library 1.9.2 runtime dependency, creator support & unit tests. |
-| **MC 26.2** | Modern Predecessor | `1.2.12+26.2` | `1.2.13+26.2` | 🟢 **Ready to Publish** | Adopted Dasik Library 1.9.2 runtime dependency, creator support & unit tests. |
+| **MC 26.3** | Modern Lead | `1.2.13+26.3` | None | 🟢 **Up to Date** | Adopted Dasik Library 1.9.2 runtime dependency, creator support & unit tests. |
+| **MC 26.2** | Modern Predecessor | `1.2.12+26.2` | `1.2.14+26.2` | 🟢 **Ready to Publish** | Fixed 26.2 build, restored Modrinth metadata, Dasik Library 1.9.2 support links & unit tests. |
 
 ---
 
