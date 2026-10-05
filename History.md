@@ -2,6 +2,17 @@
 
 ## Version History
 
+### Repository Root Cleanup (2026-10-05)
+- **Status**: Internal Architecture Maintenance
+- **Scope**: Repository Root (No SemVer bump)
+- **Backlog Reference**: [BL-SP-006] Purge stale root-level legacy single-version leftovers
+- **Summary**:
+  - Purged 36 tracked legacy single-version artifacts from the repository root: root `src/` (pre-split snapshot), `gradle/` wrapper, `build.gradle`, `settings.gradle`, `gradle.properties`, and root `gradlew`/`gradlew.bat`.
+  - Removed untracked root `build/` and `.gradle/` directories.
+  - Preserved all multi-version infrastructure (`Archive/`, `Archive Jar of all versions/`, `Doc/`, subprojects `Speedometer v26.2/` and `Speedometer v26.3/`).
+  - Updated root `ARCHITECTURE.md` and `Speedometer v26.2/ARCHITECTURE.md` to accurately document the multi-version subproject layout and real symbols.
+  - Verified 0-error build integrity on both `Speedometer v26.2` and `Speedometer v26.3`.
+
 ### 1.2.14+26.2 (2026-10-05)
 - **Status**: Stable Release Candidate
 - **Minecraft Version**: 26.2

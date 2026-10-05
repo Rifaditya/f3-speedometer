@@ -1,21 +1,21 @@
-# Architecture & Symbol Index: Speedometer
+# Architecture & Symbol Index: Speedometer (MC 26.2)
 
 ## 1. Mod Metadata & Entrypoint
 - **Mod ID**: `speedometer`
-- **Main Entrypoint**: `` (`net.fabricmc.api.ModInitializer`)
 - **Client Entrypoint**: `net.vanillaoutsider.speedometer.client.SpeedometerClient`
+- **Target Platform**: Minecraft 26.2 (Fabric Loader >=0.18.2, Java 25)
 
 ## 2. Bytecode Mixin Target Registry
 | Target Vanilla Class | Mixin Class | Purpose |
 | :--- | :--- | :--- |
-| `Minecraft` | `Mixin` | Core bytecode hook |
+| `net.minecraft.client.gui.components.debug.DebugScreenEntries` | `DebugScreenEntriesMixin` | Registers `speedometer` debug screen entry and wraps vanilla `player_speed` |
+| `net.minecraft.client.gui.components.debug.DebugScreenEntryList` | `DebugScreenEntryListMixin` | Ensures speedometer status defaults to `IN_OVERLAY` on rebuild |
 
 ## 3. Core Mechanics & Subsystems
-- **Source Root**: `src/main/java/`
-- **Resource Root**: `src/main/resources/`
+- **Custom Debug Entry**: `net.vanillaoutsider.speedometer.client.DebugEntrySpeedometer`
+- **Native Speed Wrapper**: `net.vanillaoutsider.speedometer.client.DebugEntryPlayerSpeedWrapper`
+- **Velocity & Riding Calculation**: `net.vanillaoutsider.speedometer.util.SpeedometerSupport`
+- **Constants**: `net.vanillaoutsider.speedometer.SpeedometerMod`
 
-## 4. Dynamic GameRules & Commands
-- **GameRules / Commands**: Configured dynamically via namespaced keys (`speedometer:*`).
-
-## 5. Configuration & Sidedness Isolation
-- **Sidedness**: Server-safe logic in main, client isolated in `src/client/java` or client entrypoint.
+## 4. Configuration & Sidedness Isolation
+- **Sidedness**: Client-only mod (`environment: client`), safely scoped to client debug HUD.

@@ -10,10 +10,10 @@ This file tracks planned features, technical refinements, performance optimizati
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `[BL-SP-001]` | `[TECH_DEBT]` | Update Speedometer MC 26.2 to use Dasik Library MC 26.2 | `[MEDIUM]` | `26.2` | `✅ RESOLVED` |
 | `[BL-SP-002]` | `[TECH_DEBT]` | Update Speedometer MC 26.3 to use Dasik Library MC 26.3 | `[MEDIUM]` | `26.3` | `✅ RESOLVED` |
-| `[BL-SP-003]` | `[FEATURE]` | Multi-Era Anchor Porting: Speedometer (blocked by `[BL-SP-005]`, `[BL-SP-006]`) | `[HIGH]` | `Multi-Era` | `📌 DEFERRED` |
+| `[BL-SP-003]` | `[FEATURE]` | Multi-Era Anchor Porting: Speedometer | `[HIGH]` | `Multi-Era` | `📌 DEFERRED` |
 | **[BL-SP-004]** | `[TECH_DEBT]` | Downstream Ecosystem & Toolchain Alignment | `[HIGH]` | All Anchors | `✅ RESOLVED` |
 | `[BL-SP-005]` | `[BUGFIX]` | Repair MC 26.2 baseline: fabric-api compile dependency, manifest parity, publisher-readable queue | `[HIGH]` | `26.2` | `✅ RESOLVED` |
-| `[BL-SP-006]` | `[TECH_DEBT]` | Purge stale root-level legacy `src/`/`build/` single-version leftovers | `[MEDIUM]` | Repo root | `📌 DEFERRED` |
+| `[BL-SP-006]` | `[TECH_DEBT]` | Purge stale root-level legacy `src/`/`build/` single-version leftovers | `[MEDIUM]` | Repo root | `✅ RESOLVED` |
 
 ---
 
@@ -182,7 +182,7 @@ Per Multi-Era Version Matrix and 1 Jar 1 Version Policy, port mod across all mis
 - **Category**: `[TECH_DEBT]`
 - **Priority**: `[MEDIUM]`
 - **Target Version**: Repo root (no JAR, no SemVer bump)
-- **Status**: `📌 DEFERRED`
+- **Status**: `✅ RESOLVED`
 - **Date Added**: 2026-10-05
 - **Origin**: `/pipeline [BL-SP-003]` Stage 1 baseline audit.
 - **Problem / Context**: Repo root still contains a pre-split single-version project (`src/main` — 29 files, stale v26.2 snapshot without `SpeedometerSupport.java`/tests/Dasik bindings — plus `build/`, root `gradle/` and any root Gradle scripts). Agents and `sync_archives.py`-style scanners can mistake it for an anchor.
@@ -191,6 +191,6 @@ Per Multi-Era Version Matrix and 1 Jar 1 Version Policy, port mod across all mis
   2. `git rm` the tracked legacy files; delete untracked `build/`. Keep `Archive/`, `Archive Jar of all versions/`, `Doc/`, master docs.
   3. Update root `ARCHITECTURE.md`/README pointers if they reference root `src/`.
 - **Verification & Acceptance Criteria**:
-  - [ ] No references to root `src/` remain in tooling configs.
-  - [ ] Both subprojects still `./gradlew build` green after purge.
-  - [ ] Commit pushed.
+  - [x] No references to root `src/` remain in tooling configs.
+  - [x] Both subprojects still `./gradlew build` green after purge.
+  - [x] Commit pushed.
