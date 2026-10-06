@@ -4,4 +4,4 @@
 | :--- | :--- | :--- | :--- | :--- |
 
 ## Queue Items
-- [ ] **`1.2.13+1.21.11`** (2026-10-05) - Ported to Minecraft 1.21.11 with Dasik Library 1.1.0+1.21.11 runtime integration, unit tests, and F3 speed display
+- [x] **`1.2.13+1.21.11`** (2026-10-05) - Ported to Minecraft 1.21.11 with Dasik Library 1.1.0+1.21.11 runtime integration, unit tests, and F3 speed display
