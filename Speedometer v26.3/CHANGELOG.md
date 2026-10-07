@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.13+26.3] - 2026-09-24
+
+### Changed
+- **Dasik Library 1.9.2 Integration**: Adopted `dasik-library` 1.9.2 runtime dependency for unified cross-mod community links, creator support helpers, and diagnostics.
+- **Creator Support**: Integrated top-pinned Ko-fi creator support links.
+- **Test Suite**: Added automated unit test suite verifying real-time movement velocity calculations.
+
 ## [1.2.12+26.3] - 2026-09-14
 
 ### Added
