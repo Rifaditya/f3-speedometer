@@ -2,6 +2,16 @@
 
 ## Version History
 
+### 1.2.14+26.3 (2026-10-18)
+- **Status**: Stable Release Candidate
+- **Minecraft Version**: 26.3
+- **Backlog Reference**: [BL-SP-008] Purge Obsolete ModVersionGuard Knot ClassLoader Crash & Release 1.2.14+26.3
+- **Summary**:
+  - Purged obsolete `net.dasik.social.util.ModVersionGuard` reflection call from `SpeedometerClient.java`.
+  - Fixed Knot ClassLoader `NoClassDefFoundError` runtime crash when loaded alongside modern Dasik Library 1.11.2+.
+  - Superseded broken build 1.2.13+26.3 in release queues.
+  - Rebuilt, verified headless tests (100% green), and executed 4-Point deployment.
+
 ### 1.2.13+1.20.1 (2026-10-05)
 - **Status**: Stable Release Candidate
 - **Minecraft Version**: 1.20.1

@@ -11,7 +11,7 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| [`BL-SP-008`](tickets/BL-SP-008.md) | `[BUGFIX]` | Purge Obsolete ModVersionGuard Knot ClassLoader Crash & Release 1.2.14+26.3 | `[HIGH]` | MC 26.3 | 🚧 IN_PROGRESS | [View Ticket](tickets/BL-SP-008.md) |
+| [`BL-SP-008`](tickets/BL-SP-008.md) | `[BUGFIX]` | Purge Obsolete ModVersionGuard Knot ClassLoader Crash & Release 1.2.14+26.3 | `[HIGH]` | MC 26.3 | ✅ RESOLVED | [View Ticket](tickets/BL-SP-008.md) |
 | [`BL-SP-007`](tickets/BL-SP-007.md) | `[TECH_DEBT]` | Adopt 5-Pillar Testing & Sidedness Verification Harness | `[MEDIUM]` | All Anchors | 📌 DEFERRED | [View Ticket](tickets/BL-SP-007.md) |
 
 ---

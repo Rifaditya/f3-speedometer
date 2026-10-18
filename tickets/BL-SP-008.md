@@ -4,7 +4,7 @@
 - **Category**: `[BUGFIX]`
 - **Priority**: `[HIGH]`
 - **Scope**: `MC 26.3` (Sovereign Modern Anchor)
-- **Status**: `🚧 IN_PROGRESS`
+- **Status**: `✅ RESOLVED`
 - **Target Repository / Root**: `Vanilla Outsider Collections\Speedometer`
 
 ---
@@ -43,8 +43,8 @@ Furthermore, because version `1.2.13+26.3` was already published and contains th
 7. Update release publisher queue status and studio governance boards.
 
 ## 🏁 6. Verification Checklist
-- [ ] Obsolete `ModVersionGuard` purged from `SpeedometerClient.java`.
-- [ ] `mod_version` bumped to `1.2.14+26.3` in `gradle.properties`.
-- [ ] Clean `./gradlew test build` execution.
-- [ ] 4-Point deployment completed and stale `1.2.13+26.3` purged from test profile.
-- [ ] `platform_publisher.py --mod Speedometer --status` confirms `1.2.14+26.3` is ready.
+- [x] Obsolete `ModVersionGuard` purged from `SpeedometerClient.java`.
+- [x] `mod_version` bumped to `1.2.14+26.3` in `gradle.properties`.
+- [x] Clean `./gradlew test build` execution.
+- [x] 4-Point deployment completed and stale `1.2.13+26.3` purged from test profile.
+- [x] `platform_publisher.py --mod Speedometer --status` confirms `1.2.14+26.3` is ready.
