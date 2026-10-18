@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.14+26.3] - 2026-10-18
+
+### Fixed
+- Fixed Knot ClassLoader `NoClassDefFoundError: net/dasik/social/util/ModVersionGuard` crash when running with Dasik Library 1.11.2+
+- Purged obsolete legacy reflection guard in favor of native Fabric Loader dependency constraints
+
 ## [1.2.13+26.3] - 2026-09-24
 
 ### Changed
