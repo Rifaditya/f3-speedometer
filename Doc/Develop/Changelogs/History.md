@@ -2,6 +2,19 @@
 
 ## Version History
 
+### 1.2.15 (2026-10-25)
+- **Status**: Stable Verification Candidate / Multi-Era Anchor Parity
+- **Minecraft Version**: Multi-Era Anchor Parity (1.20.1, 1.21.1, 1.21.11, 26.1.2, 26.2, 26.3)
+- **Backlog Reference**: [BL-SP-007] Adopt 5-Pillar Testing & Sidedness Verification Harness
+- **Summary**:
+  - Adopted comprehensive client-adapted 5-Pillar Testing Harness across all 6 version anchors.
+  - **Pillar 1 (Chaos Mathematical & Property Fuzzing)**: `SpeedometerStressFuzzTest` running 25,000 iterations validating Euclidean norms, astronomical velocities, subnormal floats, and `NaN`/`Infinity` guards under Freedom Over Anti-Crash.
+  - **Pillar 2 (Virtual Concurrency & Thread-Safety Load Simulator)**: `SpeedometerConcurrencyLoadTest` stressing formatting routines across 50 virtual worker threads to guarantee zero race conditions.
+  - **Pillar 3 (ModMenu & Translation AST Verification)**: `SpeedometerAssetTranslationTest` headlessly asserting 19 localization JSON files, complete key parity, and valid `fabric.mod.json` support/donation links.
+  - **Pillar 4 (Headless Client State Machine Simulation)**: `SpeedometerStateSimulationTest` verifying camera entity resolution, vehicle riding dynamics, and format strings headlessly (`-Djava.awt.headless=true`).
+  - **Pillar 5 (Sidedness, RefMap & License Hygiene Contract)**: `SpeedometerSidednessContractTest` asserting `"environment": "client"`, 0 server entrypoints, 100% single-line GPLv3 license headers, and zero obsolete `ModVersionGuard` references.
+  - Clean compilation, 4-point archive distribution parity, zero Knot ClassLoader defects, and 100% green headless test suite across all anchors. Resolves BL-SP-007.
+
 ### 1.2.14+26.3 (2026-10-18)
 - **Status**: Stable Release Candidate
 - **Minecraft Version**: 26.3
