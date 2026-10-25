@@ -5,7 +5,8 @@ Open this file in your editor and change `[ ]` to `[x]` when you have successful
 
 ## 🚀 Published & Backlog Queue
 
-- [ ] **`1.2.14+26.2`** (2026-10-05) - Fixed 26.2 build, restored Modrinth metadata, Dasik Library 1.9.2 support links & unit tests
+- [ ] **`1.2.15+26.2`** (2026-10-25) - Adopted complete studio client-adapted 5-Pillar Test Suite
+- [x] **`1.2.14+26.2`** (2026-10-05) - SUPERSEDED (superseded by 1.2.15+26.2) - Fixed 26.2 build, restored Modrinth metadata, Dasik Library 1.9.2 support links & unit tests
 - [x] **`1.2.13+26.2`** (2026-09-24) - SUPERSEDED (never published; superseded by 1.2.14+26.2) - Adopted Dasik Library 1.9.2 runtime dependency, added creator support links & unit test suite
 - [x] **`1.2.12+26.2`** (2026-09-12) - Added Korean (ko_kr) localization
 - [x] **`1.2.11+26.2`** (2026-09-11) - Added French (fr_fr, fr_ca) localization

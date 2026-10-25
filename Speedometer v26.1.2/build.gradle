@@ -109,7 +109,15 @@ afterEvaluate {
                         println "[AUTO-ARCHIVE] Successfully copied ${jarFile.name} to central Archive directory: ${archiveDir.canonicalPath}"
                     }
 
-                    // 1b. Mod root Archive
+                    // Point 1: Mod Local Archive (Archive/builds) & root Archive
+                    def localArchiveDir = file("Archive/builds")
+                    localArchiveDir.mkdirs()
+                    copy {
+                        from jarFile
+                        into localArchiveDir
+                    }
+                    println "[DEPLOY-POINT-1] Copied ${jarFile.name} to local Archive: ${localArchiveDir.canonicalPath}"
+
                     def rootArchive = file("../Archive")
                     if (rootArchive.exists()) {
                         copy {
