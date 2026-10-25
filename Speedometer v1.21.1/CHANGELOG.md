@@ -1,5 +1,8 @@
 # Changelog - Speedometer (MC 1.21.1)
 
+## [1.2.15+1.21.1] - 2026-10-25
+- Adopted complete studio client-adapted 5-Pillar Test Suite (Chaos Velocity Fuzzing, Virtual Concurrency Load, Translation AST, DebugScreenOverlay Client State Simulation, Sidedness Contract & Bytecode Scan).
+
 ## [1.2.13+1.21.1] - 2026-10-05
 - Ported Speedometer to Minecraft 1.21.1.
 - Integrated with Dasik Library 1.1.0+1.21.1 for shared community and creator support helpers.
