@@ -18,7 +18,7 @@ Open this file in your editor and change `[ ]` to `[x]` when you have successful
 - [x] **`1.2.5+26.2`** (2026-09-05) - Added Russian (ru_ru) localization
 - [x] **`1.2.4+26.2`** (2026-09-04) - Added Traditional Chinese (zh_tw) localization
 - [x] **`1.2.3-26.2`** (2026-08-25) - SUPERSEDED (never published; superseded by 1.2.14+26.2) - Added Simplified Chinese (zh_cn) localization and language assets
-- [x] **`1.2.2-26.2`** (2026-07-21) - Update mod description tagline to "Player Speed but blocks per second"
+- [ ] **`1.2.2-26.2`** (2026-07-21) - Update mod description tagline to "Player Speed but blocks per second"
 - [ ] **`1.2.1-26.2`** (2026-07-21) - Renamed mod back to Speedometer, added smart consolidation and dynamic length scaling
 - [ ] **`1.1.0-26.2`** (2026-07-21) - Restructured to align with official Minecraft 26.3 speed entry structure
 - [ ] **`1.0.3-26.2`** (2026-07-20) - Standing still gravity fix & vehicle support

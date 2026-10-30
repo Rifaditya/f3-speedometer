@@ -1,7 +1,7 @@
 # 📌 Speedometer Backlog
 
-<!-- Highest Historical ID: BL-SP-008 (Next Ticket Must Start at BL-SP-009) -->
-> **Next Available Ticket ID**: `[BL-SP-009]`
+<!-- Highest Historical ID: BL-SP-009 (Next Ticket Must Start at BL-SP-010) -->
+> **Next Available Ticket ID**: `[BL-SP-010]`
 
 This file tracks planned features, technical refinements, performance optimizations, and deferred bug fixes for **Speedometer**.
 
@@ -11,7 +11,7 @@ This file tracks planned features, technical refinements, performance optimizati
 
 | ID | Category | Title | Priority | Target Version | Status | Specification |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| - | - | *No active backlog items* | - | - | - | - |
+| [`BL-SP-009`](tickets/BL-SP-009.md) | `[GOVERNANCE]` | Storefront Reconciliation: Align Mod Pages with Current Public Release | `[HIGH]` | `Platform Pages` | `📌 DEFERRED` | [View Ticket](tickets/BL-SP-009.md) |
 
 *(All previous items have been resolved and documented in CHANGELOG.md and History.md. New items will be queued here.)*
 
