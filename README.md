@@ -1,39 +1,41 @@
-# Speedometer
+# ⚡ Speedometer
 
-A lightweight, **100% Zero-Dependency** Minecraft client mod. **Player Speed but blocks per second.**
+> **Player Speed but blocks per second.**
+
+Speedometer converts your movement into real-world readable **blocks per second (b/s)**. Powered directly by vanilla's 20 TPS physics engine, it updates dynamically, breaks down horizontal vs vertical velocity, works on mounts and vehicles, and seamlessly consolidates with vanilla's `player_speed` on modern Minecraft versions.
+
+Part of the **Vanilla Outsider Collection** — mods that refine the vanilla experience with modern standards.
 
 ---
 
 ## ⚡ Features
-- **Native F3 Debug Entry**: Registered as `speedometer` within Minecraft's `DebugScreenEntries`, coexisting with vanilla's `player_speed` (in 26.3+).
-- **In-Game Toggle & Layout Configuration (`F3 + F6`)**:
-  - The mod registers `speedometer` as a separate option in the F3 Debug Options Screen.
-  - Toggling `player_speed` and `speedometer` gives you complete layout control:
-    - **Both Enabled** (Smart consolidation): `Speed: 0.215 blocks/tick, 4.30 b/s (H: 4.30, V: 0.00)`
-    - **Only Speedometer Enabled**: `Speed: 4.30 b/s (H: 4.30, V: 0.00)`
-    - **Only Player Speed Enabled** (Vanilla): `Speed: 0.215 blocks/tick`
-- **Dynamic Sizing**: Automatically adjusts the HUD string width without rigid space padding, allowing it to grow and shrink smoothly and flawlessly.
-- **Detailed Vector Breakdown**: Displays total speed alongside horizontal (**H**) and vertical (**V**) velocity components:
-  - **Speed**: Total 3D movement velocity in blocks per second (b/s).
-  - **H (Horizontal)**: Ground speed across the X/Z axis.
-  - **V (Vertical)**: Up/down speed on the Y axis.
-- **Vehicle & Riding Support**: Accurately tracks movement speed when riding horses, minecarts, boats, or pigs.
-- **Zero External Dependencies**: Requires only Fabric Loader. No Fabric API or config libraries needed.
+- **Native F3 Debug Integration**:
+  - **Modern (1.21.11, 26.x+)**: Registered as `speedometer` within Minecraft's native `DebugScreenEntries` (`F3 + F6`).
+  - **Legacy (1.20.1, 1.21.1)**: Hooks directly into the F3 debug overlay.
+- **Smart Display Layouts (`F3 + F6`)**:
+  - **Speedometer Only** *(Default)*: `Speed: 58.79 b/s (H: 58.62, V: 4.47)`
+  - **Both Enabled (Smart Consolidation)**: `Speed: 2.049 blocks/tick, 40.97 b/s (H: 37.46, V: 16.60)`
+  - **Vanilla Player Speed Only**: `Speed: 0.215 blocks/tick`
+- **ALWAYS_ON HUD Pinning**: Pin speedometer directly to the screen via `F3 + F6` (`Always` mode).
+- **Dynamic Sizing**: Automatically adjusts HUD string width without rigid space padding or jitter.
+- **Vector Velocity Breakdown**: Displays total 3D speed alongside horizontal (**H**) and vertical (**V**) velocity.
+- **Vehicle & Mount Support**: Accurately tracks movement speed when riding horses, minecarts, boats, pigs, or striders.
 
 ---
 
-## ⚙️ How to Toggle Layouts (In-Game)
-1. Press **`F3 + F6`** in-game to open the vanilla **F3 Debug Options Screen**.
-2. Locate **`speedometer`** and **`player_speed`** (on 26.3+).
-3. Toggle their status to set whether they appear in the overlay (`Always`, `In Overlay`, or `OFF`).
-4. Returning to the game will dynamically apply the chosen layout (including smart consolidation).
+## 📦 Dependencies
+- **Fabric Loader**
+- **Fabric API**
+- **Dasik Library**
 
 ---
 
 ## 📜 Installation
 1. Install Fabric Loader.
-2. Drop `speedometer-1.2.2-26.2.jar` into your `.minecraft/mods` folder.
-3. Launch Minecraft, press `F3` (or `F3 + F6`), and view your real-time movement speed!
+2. Install Fabric API and Dasik Library.
+3. Download the matching **Speedometer** JAR for your Minecraft version.
+4. Drop the JAR into your `.minecraft/mods` folder.
+5. Launch Minecraft — press `F3` (or `F3 + F6` to configure layouts).
 
 ---
 

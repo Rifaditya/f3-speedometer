@@ -1,19 +1,19 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/Zero_Dependencies-No_Fabric_API_Needed-success?style=for-the-badge" alt="Zero Dependencies">
-    <img src="https://img.shields.io/badge/Language-Java_25-orange?style=for-the-badge&logo=java" alt="Java 25">
+    <img src="https://img.shields.io/badge/Platform-Fabric-blue?style=for-the-badge&logo=fabric" alt="Fabric">
+    <img src="https://img.shields.io/badge/Minecraft-1.20.1_--_26.x-brightgreen?style=for-the-badge" alt="Minecraft 1.20.1 - 26.x">
+    <img src="https://img.shields.io/badge/Language-Java_17+-orange?style=for-the-badge&logo=java" alt="Java 17+">
     <img src="https://img.shields.io/badge/License-GPLv3-green?style=for-the-badge" alt="License">
-    <img src="https://img.shields.io/badge/Minecraft-26.2+-brightgreen?style=for-the-badge" alt="Minecraft 26.2+">
 </p>
 
 <h1>⚡ Speedometer</h1>
 
 <blockquote><strong>Player Speed but blocks per second.</strong></blockquote>
 
-<p><strong>Active Version Policy:</strong> I build <strong>1 JAR for 1 Version</strong>. I only update and maintain the latest active Minecraft version (e.g. when 26.3 is released, 26.2 is retired). No backports or legacy version maintenance. Please do not ask.</p>
+<p><strong>Active Version Policy:</strong> I build <strong>1 JAR for 1 Version</strong>. Each release is built specifically for a single Minecraft version anchor. Please make sure you download the matching JAR file for your game version.</p>
 
 <p>Every Minecraft player knows the frustration: you press F3, look for your speed, and vanilla gives you <code>0.215 blocks/tick</code>. A raw physics calculation unit that means nothing during normal gameplay. Is that fast? Is that slow? How fast are you actually flying with Elytra or riding a horse?</p>
 
-<p><strong>Speedometer</strong> fixes this foundation. It adds a native F3 debug entry that converts your movement into real-world readable <strong>blocks per second (b/s)</strong>. Powered directly by vanilla's 20 tps physics engine (<code>getKnownSpeed()</code>), it updates dynamically, breaks down horizontal vs vertical velocity, works on vehicles, and seamlessly consolidates with vanilla's <code>player_speed</code> on Minecraft 26.3+.</p>
+<p><strong>Speedometer</strong> fixes this foundation. It converts your movement into real-world readable <strong>blocks per second (b/s)</strong>. Powered directly by vanilla's 20 TPS physics engine, it updates dynamically, breaks down horizontal vs vertical velocity, works on mounts and vehicles, and seamlessly consolidates with vanilla's <code>player_speed</code> on modern Minecraft versions.</p>
 
 <p>Part of the <strong>Vanilla Outsider Collection</strong> — mods that refine the vanilla experience with modern standards.</p>
 
@@ -26,7 +26,7 @@
     <img src="https://img.youtube.com/vi/Y1DDyWD-5es/maxresdefault.jpg" alt="Speedometer Showcase" width="100%">
   </a>
 </p>
-<p align="center"><em>Click to watch — Speedometer in action with a max Elytra speed mod. Works independently on its own, or consolidates with vanilla's <code>player_speed</code> into a single clean line when both are enabled.</em></p>
+<p align="center"><em>Click to watch — Speedometer in action! Works independently on its own, or consolidates with vanilla's <code>player_speed</code> into a single clean line when both are enabled.</em></p>
 
 <blockquote>
   <strong>ℹ️ Note:</strong> CurseForge does not support embedded video players. Click the thumbnail above to watch the showcase on YouTube.
@@ -36,29 +36,30 @@
 
 <h2>✨ Features</h2>
 
-<h3>⚡ Fully Independent F3 Debug Entry</h3>
-<p>Speedometer registers its own dedicated <code>speedometer</code> option inside Minecraft's native <code>DebugScreenEntries</code> system (<code>F3 + F6</code>). It operates completely on its own — requiring zero external libraries or vanilla <code>player_speed</code> entries.</p>
-<blockquote>
-  <strong>ℹ️ Native Integration:</strong> Registered as a first-class debug entry in Minecraft's debug overlay system — not a hacky screen overlay.
-</blockquote>
+<h3>⚡ Native F3 Debug Integration</h3>
+<p>Speedometer integrates seamlessly into Minecraft's debug display:</p>
+<ul>
+  <li><strong>Modern Versions (1.21.11, 26.x+)</strong>: Registers a dedicated <code>speedometer</code> entry directly inside Minecraft's native <code>DebugScreenEntries</code> system (<code>F3 + F6</code>).</li>
+  <li><strong>Legacy Versions (1.20.1, 1.21.1)</strong>: Hooks directly into the F3 debug screen overlay, appearing immediately when you open F3.</li>
+</ul>
 
-<h3>🛠️ Smart Display Layouts (F3 + F6)</h3>
-<p>Choose your preferred display mode directly in the in-game <strong>F3 Debug Options Screen</strong> (<code>F3 + F6</code>):</p>
+<h3>🛠️ Smart Display Layouts &amp; Consolidation (F3 + F6)</h3>
+<p>On versions with Minecraft's debug options menu (<code>F3 + F6</code>), choose your preferred display layout:</p>
 
 <ol>
-  <li><strong>Speedometer Only</strong> <em>(Default — all versions)</em>:
+  <li><strong>Speedometer Only</strong> <em>(Default)</em>:
     <pre><code>Speed: 58.79 b/s (H: 58.62, V: 4.47)</code></pre>
   </li>
-  <li><strong>Both Enabled (Smart Consolidation)</strong> <em>(26.3+)</em>:
+  <li><strong>Both Enabled (Smart Consolidation)</strong>:
     <pre><code>Speed: 2.049 blocks/tick, 40.97 b/s (H: 37.46, V: 16.60)</code></pre>
   </li>
-  <li><strong>Vanilla Player Speed Only</strong> <em>(26.3+)</em>:
+  <li><strong>Vanilla Player Speed Only</strong>:
     <pre><code>Speed: 0.215 blocks/tick</code></pre>
   </li>
 </ol>
 
 <blockquote>
-  <strong>💡 Smart Consolidation:</strong> When both <code>player_speed</code> and <code>speedometer</code> are enabled in F3 options, they automatically merge into a single clean line to save HUD space.
+  <strong>💡 Smart Consolidation:</strong> When both vanilla's <code>player_speed</code> and <code>speedometer</code> are enabled in F3 options, they automatically merge into a single clean line to save HUD space.
 </blockquote>
 
 <p><strong>Speedometer Only (Standalone):</strong></p>
@@ -72,10 +73,10 @@
 </p>
 
 <h3>📌 ALWAYS_ON HUD Pinning</h3>
-<p>Want to track your speed without keeping the entire F3 debug wall open? Toggle <code>speedometer</code> to <strong><code>Always</code></strong> in the <code>F3 + F6</code> menu to keep a minimal speedometer pinned to your screen at all times.</p>
+<p>Want to track your speed without keeping the entire F3 debug wall open? On supported modern versions, toggle <code>speedometer</code> to <strong><code>Always</code></strong> in the <code>F3 + F6</code> menu to keep a minimal speedometer pinned to your screen at all times.</p>
 
 <h3>📐 Dynamic Scaling &amp; Jitter-Free Physics</h3>
-<p>Unlike static formatted debug text, Speedometer uses dynamic string sizing that expands and shrinks flawlessly as your velocity changes. By sampling vanilla's pre-calculated <code>Entity.getKnownSpeed()</code> vector once per tick, it provides smooth, jitter-free output with <strong>zero performance overhead</strong>.</p>
+<p>Unlike static formatted debug text, Speedometer uses dynamic string sizing that expands and shrinks flawlessly as your velocity changes. By sampling vanilla's pre-calculated velocity vector once per tick and multiplying by 20 TPS, it provides smooth, jitter-free output with <strong>zero performance overhead</strong>.</p>
 
 <h3>↔️ Horizontal (H) &amp; Vertical (V) Breakdown</h3>
 <p>Get instant insight into your movement dynamics:</p>
@@ -88,18 +89,15 @@
 <h3>🚗 Vehicle &amp; Mount Tracking</h3>
 <p>Speedometer automatically detects when you are riding a horse, minecart, boat, pig, or strider, tracking the vehicle's actual movement velocity instead of player entity position.</p>
 
-<h3>🪶 100% Zero Dependencies</h3>
-<p>Built for pure performance. No Fabric API required. No Cloth Config. No third-party library dependencies. Just drop the JAR into your <code>mods</code> folder.</p>
-
 <hr>
 
 <h2>📦 Installation &amp; Environment</h2>
 
 <h3>⚛️ Environment Support</h3>
 <ul>
-  <li>☑ <strong>Client-side only</strong>: All functionality is done client-side and is compatible with vanilla servers.
+  <li>☑ <strong>Client-side only</strong>: All functionality runs purely on the client and is fully compatible with vanilla and modded servers.
     <ul>
-      <li>☑ Works in singleplayer too</li>
+      <li>☑ Works in singleplayer</li>
       <li>☑ Works in multiplayer (you see your own speed)</li>
     </ul>
   </li>
@@ -107,12 +105,20 @@
   <li>☐ <strong>Client and server</strong></li>
 </ul>
 
+<h3>📋 Dependencies</h3>
+<ul>
+  <li><strong>Fabric Loader</strong></li>
+  <li><strong>Fabric API</strong></li>
+  <li><strong>Dasik Library</strong></li>
+</ul>
+
 <h3>📥 Install Instructions</h3>
 <ol>
   <li>Install <strong><a href="https://fabricmc.net/use/installer/">Fabric Loader</a></strong>.</li>
-  <li>Download the latest <strong>Speedometer</strong> JAR for your Minecraft version.</li>
+  <li>Install <strong><a href="https://curseforge.com/minecraft/mc-mods/fabric-api">Fabric API</a></strong> and <strong><a href="https://curseforge.com/minecraft/mc-mods/dasik-library">Dasik Library</a></strong>.</li>
+  <li>Download the matching <strong>Speedometer</strong> JAR for your Minecraft version.</li>
   <li>Place the JAR in your <code>.minecraft/mods</code> folder.</li>
-  <li>Launch Minecraft — press <code>F3</code> (or <code>F3 + F6</code> to configure).</li>
+  <li>Launch Minecraft — press <code>F3</code> (or <code>F3 + F6</code> to configure layouts on modern versions).</li>
 </ol>
 
 <hr>
@@ -121,28 +127,34 @@
 
 <table border="1" cellpadding="6" cellspacing="0">
   <thead>
-    <tr><th align="left">Feature</th><th align="center">Fabric (26.2+)</th></tr>
+    <tr><th align="left">Feature</th><th align="center">Support</th></tr>
   </thead>
   <tbody>
     <tr><td>Singleplayer</td><td align="center">✅</td></tr>
-    <tr><td>Multiplayer (LAN/Server)</td><td align="center">✅</td></tr>
+    <tr><td>Multiplayer (LAN/Dedicated Server)</td><td align="center">✅</td></tr>
     <tr><td>Vanilla Servers</td><td align="center">✅</td></tr>
-    <tr><td>Dedicated Server Only</td><td align="center">❌ (client mod)</td></tr>
-    <tr><td><strong>IG: Max Elytra Fly Speed</strong></td><td align="center">✅</td></tr>
-    <tr><td><strong>IG: Creative Hyper Speed</strong></td><td align="center">✅</td></tr>
+    <tr><td>Dedicated Server Required</td><td align="center">❌ (Client-side mod)</td></tr>
   </tbody>
 </table>
 
-<h3>🎮 Version Compatibility &amp; Support</h3>
+<h3>🎮 Version Compatibility</h3>
 <table border="1" cellpadding="6" cellspacing="0">
   <thead>
-    <tr><th align="left">Minecraft Version</th><th align="center">Status</th></tr>
+    <tr><th align="left">Minecraft Version</th><th align="center">Architecture Status</th></tr>
   </thead>
   <tbody>
-    <tr><td>26.2 and above (current)</td><td align="center">✅ Active</td></tr>
-    <tr><td>26.1.x and below</td><td align="center">❌ Not supported</td></tr>
+    <tr><td>MC 1.20.1</td><td align="center">✅ Supported (Legacy Immortal Anchor)</td></tr>
+    <tr><td>MC 1.21.1</td><td align="center">✅ Supported (Tricky Trials Early Anchor)</td></tr>
+    <tr><td>MC 1.21.11</td><td align="center">✅ Supported (Winter Drop Transitional Anchor)</td></tr>
+    <tr><td>MC 26.2, 26.3+</td><td align="center">✅ Supported (Modern Sovereign Anchors)</td></tr>
   </tbody>
 </table>
+
+<hr>
+
+<h2>📖 Official Wiki &amp; Documentation</h2>
+<p>Detailed mechanics, vector calculation breakdowns, and multi-version architecture guides are available on the official documentation portal:</p>
+<p>👉 <strong><a href="https://dasik-mc-studio.pages.dev/vo-speedometer/">Speedometer Official Wiki</a></strong></p>
 
 <hr>
 
@@ -157,7 +169,7 @@
 </p>
 
 <blockquote>
-  <strong>🇮🇩 Indonesian Users:</strong> SocioBuzz and Saweria support local payment methods (Gopay, OVO, Dana, etc.) if you want to support me without using PayPal/Ko-fi!
+  <strong>🇮🇩 Indonesian Users:</strong> SocioBuzz and Saweria support local payment methods (GoPay, OVO, Dana, QRIS, etc.) if you want to support me without using PayPal/Ko-fi!
 </blockquote>
 
 <hr>
